@@ -17,6 +17,7 @@ namespace clxapi
 
 
         private ClxHttpClient _clxHttpClient;
+        private Settings _settings;
         private string _baseUrl = "https://clx-aws.clxnetworks.com/api/";
 
         public ClxApi()
@@ -30,7 +31,9 @@ namespace clxapi
         /// <param name="Auth"></param>
         public ClxApi(String [] Auth)
         {
-            _clxHttpClient = new ClxHttpClient(Auth);
+            _settings = new Settings();
+            _clxHttpClient = new ClxHttpClient(Auth, _settings);
+            
         }
 
         /// <summary>
@@ -48,7 +51,7 @@ namespace clxapi
 
         public JArray GetOperators()
         {
-             _clxHttpClient.Url = String.Format(BaseUrl + "operator");
+             _clxHttpClient.Url = String.Format(BaseUrl + _settings.operatorPath);
             var request = _clxHttpClient.Request();
 
             return request;

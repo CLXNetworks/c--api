@@ -11,14 +11,17 @@ namespace clxapi
     public class ClxHttpClient
     {
         private string [] _auth;
+        private ISettings _settings;
 
         /// <summary>
-        /// Constructor, take array, with username and password for api
+        /// Constructor, take array, with username and password for api, also api settings.
         /// </summary>
-        /// <param name="Auth"></param>
-        public ClxHttpClient(string [] Auth)
+        /// <param name="auth"></param>
+        /// <param name="settings"></param>
+        public ClxHttpClient(string [] auth, ISettings settings)
         {
-            _auth = Auth;
+            _auth = auth;
+            _settings = settings;
         }
 
         /// <summary>
@@ -51,6 +54,7 @@ namespace clxapi
             }
             catch (WebException e) 
             {
+                var dummy = 5;
                 throw new NotImplementedException();
                 // TODO: Handle error with statuscodes
             }
