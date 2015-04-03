@@ -1,7 +1,7 @@
 ﻿using System;
 namespace clxapi
 {
-    interface ISettings
+    public interface ISettings
     {
         string Url { get; set; }
     }

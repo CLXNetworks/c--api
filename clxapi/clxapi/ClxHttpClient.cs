@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Security.Authentication;
 using System.Text;
 using System.Web;
 
@@ -54,9 +55,13 @@ namespace clxapi
             }
             catch (WebException e) 
             {
-                var dummy = 5;
+                HttpWebResponse errorResponse = e.Response as HttpWebResponse;
+                if (errorResponse.StatusCode == HttpStatusCode.Unauthorized)
+                {
+                    throw new AuthenticationException();
+                }
                 throw new NotImplementedException();
-                // TODO: Handle error with statuscodes
+                // TODO: add more cases of statuscodes.
             }
             catch (Exception e)
             {

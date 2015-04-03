@@ -26,14 +26,13 @@ namespace clxapi
         }
 
         /// <summary>
-        /// Constructor, Inject Username and Password as Array
+        /// Constructor, Inject Username and Password as Array, also inject ISettings reference.
         /// </summary>
         /// <param name="Auth"></param>
         public ClxApi(String [] Auth)
         {
             _settings = new Settings();
-            _clxHttpClient = new ClxHttpClient(Auth, _settings);
-            
+            _clxHttpClient = new ClxHttpClient(Auth, _settings);        
         }
 
         /// <summary>
