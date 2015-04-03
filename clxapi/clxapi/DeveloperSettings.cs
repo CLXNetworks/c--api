@@ -5,8 +5,8 @@ using System.Web;
 
 namespace clxapi
 {
-    public class DeveloperSettings
+    public class DeveloperSettings : Settings
     {
-        // Place authentication here later.
+        // Add info for developers only here.
     }
 }
