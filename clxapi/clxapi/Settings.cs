@@ -5,14 +5,14 @@ using System.Text;
 
 namespace clxapi
 {
-    public class Settings : ISettings
+    /// <summary>
+    /// Containts all paths toward ClxApi
+    /// </summary>
+    public class Settings 
     {
-        // Add all paths to clx api here.
-        public string operatorPath = "operator";
-
         /// <summary>
-        /// Property to change selected path.
+        ///  OperatorPath
         /// </summary>
-        public string Url { get; set; }
+        public string operatorPath = "operator";
     }
 }

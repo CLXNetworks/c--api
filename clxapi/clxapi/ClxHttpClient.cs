@@ -12,14 +12,14 @@ namespace clxapi
     public class ClxHttpClient
     {
         private string [] _auth;
-        private ISettings _settings;
+        private Settings _settings;
 
         /// <summary>
         /// Constructor, take array, with username and password for api, also api settings.
         /// </summary>
         /// <param name="auth"></param>
         /// <param name="settings"></param>
-        public ClxHttpClient(string [] auth, ISettings settings)
+        public ClxHttpClient(string [] auth, Settings settings)
         {
             _auth = auth;
             _settings = settings;
@@ -63,7 +63,7 @@ namespace clxapi
                 throw new NotImplementedException();
                 // TODO: add more cases of statuscodes.
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 throw new NotImplementedException();
                 // TODO: Handle unexpected errors

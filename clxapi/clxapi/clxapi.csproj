@@ -75,7 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DeveloperSettings.cs" />
-    <Compile Include="ISettings.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="ClxApi.cs" />
     <Compile Include="ClxHttpClient.cs" />
