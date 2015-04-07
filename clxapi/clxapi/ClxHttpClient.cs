@@ -20,8 +20,8 @@ namespace clxapi
         /// <summary>
         ///  Constructor to initialize ClxHtttpClient: Auth is username/password and settings is api routes of Clx api.
         /// </summary>
-        /// <param name="auth"></param>
-        /// <param name="settings"></param>
+        /// <param name="auth">Array with username/password to api</param>
+        /// <param name="settings">Dependency injection of Clx api routes</param>
         public ClxHttpClient(string [] auth, Settings settings)
         {
             _auth = auth;
