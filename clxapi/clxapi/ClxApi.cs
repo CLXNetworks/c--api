@@ -8,6 +8,9 @@ using System.Net;
 
 namespace clxapi
 {
+    /// <summary>
+    /// Masterclass, holds all Operators through requests are done, Make an instance of this class to acces the public operator methods.
+    /// </summary>
     public class ClxApi
     {
         // Constants to allow to configure what type of Request it is.
@@ -20,15 +23,10 @@ namespace clxapi
         private Settings _settings;
         private string _baseUrl = "https://clx-aws.clxnetworks.com/api/";
 
-        public ClxApi()
-        {
-            //Emty
-        }
-
         /// <summary>
-        /// Constructor, Inject Username and Password as Array, also inject ISettings reference.
+        /// Constructor, Initialize with credentials array, It will then setup all other dependendancies in project.
         /// </summary>
-        /// <param name="Auth"></param>
+        /// <param name="Auth">Array with credentials</param>
         public ClxApi(String [] Auth)
         {
             _settings = new Settings();
@@ -36,7 +34,7 @@ namespace clxapi
         }
 
         /// <summary>
-        /// Property used to change BaseUrl of application.
+        /// Property to give possibilty to change baseurl of api.
         /// </summary>
         public string BaseUrl 
         {
@@ -47,7 +45,10 @@ namespace clxapi
         /**************
         * OPERATORS
         **************/
-
+        /// <summary>
+        /// Returns all operators from Clx api.
+        /// </summary>
+        /// <returns>JArray</returns>
         public JArray GetOperators()
         {
              _clxHttpClient.Url = String.Format(BaseUrl + _settings.operatorPath);
