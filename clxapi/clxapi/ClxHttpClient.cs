@@ -9,13 +9,16 @@ using System.Web;
 
 namespace clxapi
 {
+    /// <summary>
+    /// Class to handle the Http request to Clx api.
+    /// </summary>
     public class ClxHttpClient
     {
         private string [] _auth;
         private Settings _settings;
 
         /// <summary>
-        /// Constructor, take array, with username and password for api, also api settings.
+        ///  Constructor to initialize ClxHtttpClient: Auth is username/password and settings is api routes of Clx api.
         /// </summary>
         /// <param name="auth"></param>
         /// <param name="settings"></param>
@@ -26,13 +29,15 @@ namespace clxapi
         }
 
         /// <summary>
-        /// Property that set selected Url of chosen Operator from ClxApi.CS 
+        /// Property ClxApi.cs Set chosen path to this property before eatch request. ClxHttpClient then Get Url and make request.
         /// </summary>
         public string Url { get; set; }
 
        /// <summary>
-       /// Method, Handle all Requests to API with HTTP Basic Auth.
+       /// Method Handles all Http requests to Clx api.
        /// </summary>
+       /// <exception cref="AuthenticationException">If wrong/missing credentials for api login.</exception>
+       /// <exception cref="NotImplementedException">Remove when Method is done.</exception>
        /// <returns>JArray</returns>
         public JArray Request()
         {
@@ -67,8 +72,7 @@ namespace clxapi
             {
                 throw new NotImplementedException();
                 // TODO: Handle unexpected errors
-            }
-           
+            }        
         }
     }
 }
