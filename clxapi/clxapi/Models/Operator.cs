@@ -6,6 +6,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace clxapi
 {
+    /// <summary>
+    /// Model for databinding.
+    /// </summary>
     public class Operator
     {
         public int id { get; set; }

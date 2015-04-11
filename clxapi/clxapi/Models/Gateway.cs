@@ -5,6 +5,9 @@ using System.Web;
 
 namespace clxapi
 {
+    /// <summary>
+    /// Model for databinding.
+    /// </summary>
     public class Gateway
     {
         public int id { get; set; }

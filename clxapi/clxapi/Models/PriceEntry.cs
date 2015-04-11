@@ -5,6 +5,9 @@ using System.Web;
 
 namespace clxapi
 {
+    /// <summary>
+    /// Model for databinding.
+    /// </summary>
     public class PriceEntry
     {
 
