@@ -45,7 +45,7 @@ namespace clxapi
         /// <summary>
         /// Returns all operators from Clx api.
         /// </summary>
-        /// <returns>JArray with operators</returns>
+        /// <returns>Ienumerable Operator</returns>
         public IEnumerable<Operator> GetOperators()
         {
             var result = _clxHttpClient.Get(ClxSettings.OperatorPath);
@@ -54,16 +54,26 @@ namespace clxapi
             return operators;
         }
 
+        /// <summary>
+        /// Returns one operator from Clx api.
+        /// </summary>
+        /// <param name="id">Id of selected operator</param>
+        /// <returns>Operator</returns>
         public Operator GetOperatorById(int id) 
         {
             var result = _clxHttpClient.Get(ClxSettings.OperatorPath +id);
-                return new Operator();
+            var operators = result.ToObject<Operator>();
+            return operators;
         }
 
         /**************
         * GATEWAYS
         **************/
 
+        /// <summary>
+        /// Returns all gateways from Clx api.
+        /// </summary>
+        /// <returns>IEnumerable Gateway</returns>
         public IEnumerable<Gateway> GetGateways()
         {
             var result = _clxHttpClient.Get(ClxSettings.GatewayPath);
@@ -72,6 +82,11 @@ namespace clxapi
             return gateways;
         }
 
+        /// <summary>
+        /// Returns one gateway from Clx api.
+        /// </summary>
+        /// <param name="id">Id of selected gateway</param>
+        /// <returns>Gateway</returns>
         public Gateway GetGatewayById(int id)
         {
             var result = _clxHttpClient.Get(ClxSettings.GatewayPath +id);
@@ -84,6 +99,11 @@ namespace clxapi
         * Price Entries
         **************/
 
+        /// <summary>
+        /// Returns all price entries from selected gateway.
+        /// </summary>
+        /// <param name="id">Id of selected gateway</param>
+        /// <returns>IEnumerable PriceEntry</returns>
         public IEnumerable<PriceEntry> GetPriceEntriesByGatewayId(int id)
         {
             var result = _clxHttpClient.Get(ClxSettings.GatewayPath +id +ClxSettings.PricePath);
@@ -91,6 +111,12 @@ namespace clxapi
             return priceEntries;
         }
 
+        /// <summary>
+        /// Returns all price entries from selected gateway and selected operator.
+        /// </summary>
+        /// <param name="gatewayId">Id of selected gateway</param>
+        /// <param name="operatorId">Id of selected operator</param>
+        /// <returns>Object?Array</returns>
         public IEnumerable<PriceEntry> GetPriceEntriesByGatewayIdAndOperatorId(int gatewayId, int operatorId)
         {
             var result = _clxHttpClient.Get(ClxSettings.GatewayPath +gatewayId +ClxSettings.PricePath +operatorId);
@@ -98,6 +124,13 @@ namespace clxapi
             return priceEntries;
         }
 
+        /// <summary>
+        /// Returns all price entries from selected gateway and selected operator by selected date.
+        /// </summary>
+        /// <param name="gatewayId">Id of selected gateway</param>
+        /// <param name="operatorId">Id of selected operator</param>
+        /// <param name="date">Selected date</param>
+        /// <returns>Object?Array</returns>
         public PriceEntry GetPriceEntriesByGatewayIdAndOperatorIdAndDate(int gatewayId, int operatorId, DateTime date)
         {
             var selectedDateParam = String.Format("{0},{1}", ClxSettings.DateParam, date);
