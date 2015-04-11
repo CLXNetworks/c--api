@@ -29,14 +29,34 @@ namespace clxapi
             _settings = settings;
         }
 
+        /// <summary>
+        /// Handles Requests of type GET.
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns>Jarray or Jobject (dynamic)</returns>
         public dynamic Get(String url)
         {
             return Request("GET", url);
         }
 
+        /// <summary>
+        /// Handles Requests of type POST.
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns>Jarray or Jobject (dynamic)</returns>
         public dynamic Post(String url)
         {
             return Request("POST", url);
+        }
+
+        /// <summary>
+        /// Handles Requests of type PUT.
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns>Jarray or Jobject (dynamic)</returns>
+        public dynamic Put(String url)
+        {
+            return Request("PUT", url);
         }
 
         /// <summary>
@@ -45,6 +65,8 @@ namespace clxapi
         /// <param name="method">HTTP-method</param>
         /// <param name="Url">selected api path</param>
         /// <exception cref="AuthenticationException">If wrong/missing credentials for api login.</exception>
+        /// <exception cref="ArgumentException">If request is of type bad request.</exception>
+        /// <exception cref="KeyNotFoundException">If selected key/id does not exist.</exception>
         /// <exception cref="NotImplementedException">Remove when Method is done.</exception>
         /// <returns>JArray</returns>
         public dynamic Request(String method, string Url)
