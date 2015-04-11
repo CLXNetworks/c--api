@@ -4,6 +4,7 @@
 #### For developers only
 clxapi/clxapi/DeveloperSettings.cs
 clxapi/Documentation/
+clxapi/clxapi.Tests/
 
 # User-specific files
 *.suo
