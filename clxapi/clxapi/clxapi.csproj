@@ -63,6 +63,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <None Include="Resources\operator.json" />
+    <None Include="Resources\operators.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client\IHttpClient.cs" />
+    <Compile Include="Client\TestClient.cs" />
     <Compile Include="DeveloperSettings.cs" />
     <Compile Include="ClxSettings.cs" />
     <Compile Include="ClxApi.cs" />
@@ -83,7 +86,9 @@
     <Compile Include="Models\Operator.cs" />
     <Compile Include="Models\PriceEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="App_Data\TestData.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

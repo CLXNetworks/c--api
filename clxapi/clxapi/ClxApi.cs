@@ -120,7 +120,7 @@ namespace clxapi
         public IEnumerable<PriceEntry> GetPriceEntriesByGatewayIdAndOperatorId(int gatewayId, int operatorId)
         {
             var result = _clxHttpClient.Get(ClxSettings.GatewayPath +gatewayId +ClxSettings.PricePath +operatorId);
-            var priceEntries = result.ToObject<List<PriceEntry>>();
+            var priceEntries = result.ToObject<PriceEntry>();
             return priceEntries;
         }
 
