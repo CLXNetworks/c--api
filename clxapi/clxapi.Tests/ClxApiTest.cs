@@ -70,6 +70,72 @@ namespace clxapi.Tests
             Assert.AreEqual(data.ToList()[2].name, "Kustpilen");
             Assert.AreEqual(data.ToList()[4].type, "Robot");
         }
+
+        [TestMethod]
+        public void TestTestGetOperatorsTestAPI()
+        {
+            var settings = new ClxSettings();
+            settings.BaseURI = "http://localhost:1129/api";
+            var testClient = new ClxHttpClient(new string[] { "Username", "Password" }, settings);
+            var clxApi = new ClxApi(new string[] { "Username", "Password" }, testClient);
+            var data = clxApi.GetOperators();
+
+            Assert.IsInstanceOfType(data, typeof(IEnumerable<Operator>));
+            Assert.IsNotNull(data);
+            Assert.AreEqual(data.ToList()[0].id, 1);
+            Assert.AreEqual(data.ToList()[0].name, "Testoperatpor");
+            Assert.AreEqual(data.ToList()[0].isoCountryCode, "5");
+            Assert.AreEqual(data.ToList()[1].network, "Secretary");
+            Assert.AreEqual(data.ToList()[1].operationalStatDate, "-0001-11-30 00:00:00");
+            Assert.AreEqual(data.ToList()[1].operationalState, "inactive");
+            Assert.AreEqual(data.ToList()[1].uniqueName, "Bella");
+            Assert.AreEqual(data.ToList()[1].numberOfSubscribers, 8888);
+            
+        }
+
+        [TestMethod]
+        public void TestTestGetOperatorsByIdTestAPI()
+        {
+            var settings = new ClxSettings();
+            settings.BaseURI = "http://localhost:1129/api";
+            var testClient = new ClxHttpClient(new string[] { "Username", "Password" }, settings);
+            var clxApi = new ClxApi(new string[] { "Username", "Password" }, testClient);
+            var data = clxApi.GetOperatorById(1);
+
+            Assert.IsInstanceOfType(data, typeof(Operator));
+            Assert.IsNotNull(data);
+
+            Assert.AreEqual(data.id, 1);
+            Assert.AreEqual(data.name, "Testoperatpor");
+            Assert.AreEqual(data.isoCountryCode, "5");
+            Assert.AreEqual(data.network, "TestNetwork");
+            Assert.AreEqual(data.operationalStatDate, "-0001-11-30 00:00:00");
+            Assert.AreEqual(data.operationalState, "active");
+            Assert.AreEqual(data.uniqueName, "Testing");
+            Assert.AreEqual(data.numberOfSubscribers, 1);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(KeyNotFoundException))]
+        public void TestHttpNotFound()
+        {
+            var settings = new ClxSettings();
+            settings.BaseURI = "http://localhost:1129/api";
+            var testClient = new ClxHttpClient(new string[] { "Username", "Password" }, settings);
+            var clxApi = new ClxApi(new string[] { "Username", "Password" }, testClient);
+            testClient.Request("GET", ClxSettings.OperatorPath + 2);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TestHttpBadRequest()
+        {
+            var settings = new ClxSettings();
+            settings.BaseURI = "http://localhost:1129/api/";
+            var testClient = new ClxHttpClient(new string[] { "Username", "Password" }, settings);
+            var clxApi = new ClxApi(new string[] { "Username", "Password" }, testClient);
+            testClient.Request("GET", ClxSettings.OperatorPath + "badparameter");
+        }
         // TODO: Add testing
     }
 }
