@@ -1,15 +1,92 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace clxapi
+namespace clxapi.App_Data
 {
     public class TestData
-    {
-        public string @operator = "{\"id\": 1058, \"name\": \"Bosse Mobile\", \"network\": \"Bosse Mobile\", \"uniqueName\": \"Bosse Mobile-AL\", \"isoCountryCode\": \"5\", \"operationalState\": \"inactive\", \"operationalStatDate\": \"-0001-11-30 00:00:00\", \"numberOfSubscribers\": 5}";
-        public string operators = "[{ \"id\": 8, \"name\": \"PLC\", \"network\": \"PLC\", \"uniqueName\": \"PLC-PL\", \"isoCountryCode\": \"8\", \"operationalState\": \"active\", \"operationalStatDate\": \"-0001-11-30 00:00:00\", \"numberOfSubscribers\": 0 }, { \"id\": 1058, \"name\": \"Bosse Mobile\", \"network\": \"Bosse Mobile\", \"uniqueName\": \"Bosse Mobile-AL\", \"isoCountryCode\": \"5\", \"operationalState\": \"inactive\", \"operationalStatDate\": \"-0001-11-30 00:00:00\", \"numberOfSubscribers\": 11 },{ \"id\": 777, \"name\": \"Plus Size\", \"network\": \"Plus\", \"uniqueName\": \"Plus Size-AL\", \"isoCountryCode\": \"8\", \"operationalState\": \"active\", \"operationalStatDate\": \"-0001-11-30 00:00:00\", \"numberOfSubscribers\": 0 }]";
-        public string gateways = "[{\"id\":8888,\"name\":\"Banan\",\"type\":\"Frukt\"},{\"id\":5,\"name\":\"Gateway 5\",\"type\":\"Number\"},{\"id\":1234,\"name\":\"Kustpilen\",\"type\":\"Tåg\"},{\"id\":98534,\"name\":\"Customer\",\"type\":\"Customer\"},{\"id\":001,\"name\":\"Bender\",\"type\":\"Robot\"}]";
+    { 
+
+        public string operators
+        {
+            get {
+                Operator[] operators = new Operator[]
+                {
+                    new Operator
+                {
+                    id = 1,
+                    name = "Testoperatpor",
+                    network = "TestNetwork",
+                    uniqueName = "Testing",
+                    isoCountryCode = "5",
+                    operationalState = "active",
+                    operationalStatDate = "-0001-11-30 00:00:00",
+                    numberOfSubscribers =1
+                },
+                  new Operator
+                {
+                    id = 888,
+                    name = "ULLA BELLA",
+                    network = "Secretary",
+                    uniqueName = "Bella",
+                    isoCountryCode = "46",
+                    operationalState = "inactive",
+                    operationalStatDate = "-0001-11-30 00:00:00",
+                    numberOfSubscribers = 8888
+                }
+                };
+                return JsonConvert.SerializeObject(operators);
+            }
+        }
+        public string @operator { 
+
+            get 
+            {
+                Operator @operator = new Operator 
+                {
+                    id = 55,
+                    name = "Testoperatpor",
+                    network = "TestNetwork",
+                    uniqueName = "Testing",
+                    isoCountryCode = "5",
+                    operationalState = "active",
+                    operationalStatDate = "-0001-11-30 00:00:00",
+                    numberOfSubscribers = 1
+                };
+                return JsonConvert.SerializeObject(@operator);
+            } 
+        }
+
+        public string Gateways
+        {
+            get
+            {
+                Gateway[] gateways = new Gateway[] 
+                {
+                    new Gateway
+                    {
+                        id = 5,
+                        name = "StringNameValue",
+                        type = "StringTypeValue"
+                    },
+                    new Gateway
+                    {
+                        id = 88,
+                        name = "AnotherString",
+                        type = "AnotherString"
+                    },
+                       new Gateway
+                    {
+                        id = 44,
+                        name = "HelgiMobile",
+                        type = "CustomType"
+                    }
+                };
+                return JsonConvert.SerializeObject(gateways);
+            }          
+        }
     }
 }

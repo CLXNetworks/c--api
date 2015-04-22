@@ -74,12 +74,15 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapter\HttpAdapter.cs" />
+    <Compile Include="Adapter\IHttpAdapter.cs" />
     <Compile Include="Client\IHttpClient.cs" />
-    <Compile Include="Client\TestClient.cs" />
     <Compile Include="DeveloperSettings.cs" />
     <Compile Include="ClxSettings.cs" />
     <Compile Include="ClxApi.cs" />
     <Compile Include="Client\ClxHttpClient.cs" />
+    <Compile Include="Exception\ClxException.cs" />
+    <Compile Include="Models\Response\ClxResponse.cs" />
     <Compile Include="Models\Gateway.cs" />
     <Compile Include="Models\Operator.cs" />
     <Compile Include="Models\PriceEntry.cs" />
