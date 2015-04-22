@@ -10,30 +10,35 @@ namespace clxapi.Client
     /// </summary>
     public interface IHttpClient
     {
+        /// <summary>
+        /// Property to set BaseURL.
+        /// </summary>
+        string BaseURL { get; set; }
+
+        /// <summary>
+        /// Property to set what adapter to use.
+        /// </summary>
         IHttpAdapter HttpAdapter { get; set; }
 
         /// <summary>
         /// Handles Requests of type GET.
         /// </summary>
-        /// <param name="url"></param>
-        /// <returns></returns>
+        /// <param name="url">resourse String</param>
+        /// <returns>Jarray or Jobject (dynamic)</returns>
         dynamic Get(string url);
 
         /// <summary>
         /// Handles Requests of type POST.
         /// </summary>
-        /// <param name="url"></param>
-        /// <returns></returns>
+        /// <param name="url">resourse String</param>
+        /// <returns>Jarray or Jobject (dynamic)</returns>
         dynamic Post(string url);
 
         /// <summary>
         /// Handles Requests of type PUT.
         /// </summary>
-        /// <param name="url"></param>
-        /// <returns></returns>
+        /// <param name="url">resourse String</param>
+        /// <returns>Jarray or Jobject (dynamic)</returns>
         dynamic Put(string url);
-
-        string BaseURL { get; set; }
-
     }
 }

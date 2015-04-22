@@ -16,23 +16,36 @@ namespace clxapi.Client
     /// </summary>
     public class ClxHttpClient : IHttpClient
     {
+        /// <summary>
+        /// Property to set what adapter to use.
+        /// </summary>
         public IHttpAdapter HttpAdapter{ get; set; }
+
+        /// <summary>
+        /// Property to set BaseURL.
+        /// </summary>
         public string BaseURL{ get ; set; }
 
         /// <summary>
-        ///  Constructor to initialize ClxHtttpClient: Auth is username/password and settings is api routes of Clx api.
+        ///  Constructor to initialize ClxHtttpClient: baseURL is url to Api.
         /// </summary>
-        /// <param name="auth">Array with username/password to api</param>
-        /// <param name="settings">Dependency injection of Clx api routes</param>
+        /// <example>Code example:
+        /// <code> 
+        /// var client = new ClxHttpClient("https://clx-aws.clxnetworks.com/api"); 
+        /// </code>
+        /// </example>
+        /// <param name="baseURL">String with baseUrl to api.</param>
         public ClxHttpClient(string baseURL)
         {
             BaseURL = baseURL;
         }
 
         /// <summary>
-        /// Handles Requests of type GET.
+        /// Handles Requests of type GET. Method concatinate BaseUrl resourse String and foward request to Excecute Method.
         /// </summary>
-        /// <param name="url"></param>
+        /// <example>
+        /// </example>
+        /// <param name="url">resourse String</param>
         /// <returns>Jarray or Jobject (dynamic)</returns>
         public dynamic Get(String url)
         {
@@ -42,9 +55,9 @@ namespace clxapi.Client
         }
 
         /// <summary>
-        /// Handles Requests of type POST.
+        /// Handles Requests of type POST. Not implemented
         /// </summary>
-        /// <param name="url"></param>
+        /// <param name="url">resourse String</param>
         /// <returns>Jarray or Jobject (dynamic)</returns>
         public dynamic Post(String url)
         {
@@ -54,9 +67,9 @@ namespace clxapi.Client
         }
 
         /// <summary>
-        /// Handles Requests of type PUT.
+        /// Handles Requests of type PUT. Not implemented
         /// </summary>
-        /// <param name="url"></param>
+        /// <param name="url">resourse String</param>
         /// <returns>Jarray or Jobject (dynamic)</returns>
         public dynamic Put(String url)
         {
@@ -65,23 +78,24 @@ namespace clxapi.Client
             return parseReponse(response);
         }
 
+        /// <summary>
+        /// Private Method to parse ClxResponse into Jarray or Jobject.
+        /// </summary>
+        /// <param name="response"></param>
+        /// <returns>Jarray or Jobject</returns>
         private dynamic parseReponse(ClxResponse response)
         {
-
+            // TODO: Implement exception handling with custom exceptions.
             if (response.StatusCode > 399)
             {
                 switch (response.StatusCode)
                 {
                     case 400:
                         throw new ClxException("Bad request");
-                        break;
-                    case 404:
-                        
+                    case 404:                     
                         throw new ClxException("Fix implementation to object from api");
-                        break;
                     default:
                         throw new ClxException("Unknown error");
-                        break;
                 }
             }
             try
@@ -92,61 +106,5 @@ namespace clxapi.Client
                 throw new NotImplementedException();
             }
         }
-        /// <summary>
-        /// Handles all requests to api.
-        /// </summary>
-        /// <param name="method">HTTP-method</param>
-        /// <param name="Url">selected api path</param>
-        /// <exception cref="AuthenticationException">If wrong/missing credentials for api login.</exception>
-        /// <exception cref="ArgumentException">If request is of type bad request.</exception>
-        /// <exception cref="KeyNotFoundException">If selected key/id does not exist.</exception>
-        /// <exception cref="NotImplementedException">Remove when Method is done.</exception>
-        /// <returns>JArray</returns>
-        //public dynamic Request(String method, string Url)
-        //{
-        //    try
-        //    {
-        //        var url = BaseURL + Url;
-        //        WebRequest webRequest = HttpAdapter.Get(url);
-
-        //        using (var response = webRequest.GetResponse())
-        //        using (var content = response.GetResponseStream())
-        //        using (var reader = new StreamReader(content))
-        //        {
-        //            string result = reader.ReadToEnd();
-        //            return JValue.Parse(result);
-        //        }
-        //    }
-        //    catch (WebException e) 
-        //    {
-        //        HttpWebResponse errorResponse = e.Response as HttpWebResponse;
-        //        if (errorResponse.StatusCode == HttpStatusCode.Unauthorized)
-        //        {
-        //            throw new AuthenticationException();
-        //        }
-        //        else if (errorResponse.StatusCode == HttpStatusCode.BadRequest)
-        //        {
-        //            throw new ArgumentException();
-        //        }
-        //        else if (errorResponse.StatusCode == HttpStatusCode.NotFound)
-        //        {
-        //            throw new KeyNotFoundException();
-        //        }       
-        //            throw new NotImplementedException();
-                
-        //        // TODO: add more cases of statuscodes.
-        //    }
-        //    catch (Exception)
-        //    {
-        //        throw new NotImplementedException();
-        //        // TODO: Handle unexpected errors
-        //    }        
-        //}
-
-
-
-
-
-
     }
 }
