@@ -10,8 +10,17 @@ namespace clxapi
     /// </summary>
     public class Gateway
     {
+        /// <summary>
+        /// Property for databinding.
+        /// </summary>
         public int id { get; set; }
+        /// <summary>
+        /// Property for databinding.
+        /// </summary>
         public string name { get; set; }
+        /// <summary>
+        /// Property for databinding.
+        /// </summary>
         public string type {get; set;}
     }
 }

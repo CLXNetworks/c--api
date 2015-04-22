@@ -10,10 +10,21 @@ namespace clxapi
     /// </summary>
     public class PriceEntry
     {
-
+        /// <summary>
+        /// Property for databinding.
+        /// </summary>
         public float price { get; set; }
+        /// <summary>
+        /// Property for databinding.
+        /// </summary>
         public string gateway { get; set; }
+        /// <summary>
+        /// Property for databinding.
+        /// </summary>
         public string @operator { get; set; }
+        /// <summary>
+        /// Property for databinding.
+        /// </summary>
         public string expireDate { get; set; }
 
     }

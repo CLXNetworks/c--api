@@ -15,7 +15,7 @@ namespace clxapi
         /// <summary>
         /// TODO: Implement Custom Exception class.
         /// </summary>
-        /// <param name="message"></param>
+        /// <param name="message">Errormessage</param>
         public ClxException (string message)
             : base(message)
         {}
