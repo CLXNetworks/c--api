@@ -77,7 +77,6 @@
     <Compile Include="Adapter\HttpAdapter.cs" />
     <Compile Include="Adapter\IHttpAdapter.cs" />
     <Compile Include="Client\IHttpClient.cs" />
-    <Compile Include="DeveloperSettings.cs" />
     <Compile Include="ClxSettings.cs" />
     <Compile Include="ClxApi.cs" />
     <Compile Include="Client\ClxHttpClient.cs" />
