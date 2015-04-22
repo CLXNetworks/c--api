@@ -7,9 +7,14 @@ using System.Threading.Tasks;
 
 namespace clxapi.App_Data
 {
+    /// <summary>
+    /// Class contains testdata for tests.
+    /// </summary>
     public class TestData
     { 
-
+        /// <summary>
+        /// Returns array of Operator for tests.
+        /// </summary>
         public string operators
         {
             get {
@@ -41,6 +46,9 @@ namespace clxapi.App_Data
                 return JsonConvert.SerializeObject(operators);
             }
         }
+        /// <summary>
+        /// Returns one Operator for tests.
+        /// </summary>
         public string @operator { 
 
             get 
@@ -59,7 +67,9 @@ namespace clxapi.App_Data
                 return JsonConvert.SerializeObject(@operator);
             } 
         }
-
+        /// <summary>
+        /// Returns array of Gateway for tests. 
+        /// </summary>
         public string Gateways
         {
             get
