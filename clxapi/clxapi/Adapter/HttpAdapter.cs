@@ -106,10 +106,9 @@ namespace clxapi.Adapter
                     return res;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                res.Error = "Unexpected Exception";
-                return res;
+                throw new ClxException(e.Message);
             }  
         }
     }

@@ -85,26 +85,35 @@ namespace clxapi.Client
         /// <returns>Jarray or Jobject</returns>
         private dynamic parseReponse(ClxResponse response)
         {
-            // TODO: Implement exception handling with custom exceptions.
-            if (response.StatusCode > 399)
-            {
-                switch (response.StatusCode)
-                {
-                    case 400:
-                        throw new ClxException("Bad request");
-                    case 404:                     
-                        throw new ClxException("Fix implementation to object from api");
-                    default:
-                        throw new ClxException("Unknown error");
-                }
-            }
+            dynamic parsedBody = null;
             try
             {
-                return JValue.Parse(response.Body);
+                parsedBody = JValue.Parse(response.Body);
             }
             catch{
                 throw new NotImplementedException();
             }
+
+            
+
+            // TODO: Implement exception handling with custom exceptions.
+            if (response.StatusCode > 399)
+            {
+                string message = parsedBody.error.message;
+                int code = parsedBody.error.code;
+                switch (response.StatusCode)
+                {
+                    case 400:
+                        throw new ClxApiException(message, code);
+                    case 404:
+                        throw new ClxApiException(message, code);
+                    default:
+                        throw new ClxApiException(message, code);
+                }
+            }
+
+            return parsedBody;
+            
         }
     }
 }

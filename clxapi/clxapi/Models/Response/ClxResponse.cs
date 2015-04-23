@@ -24,10 +24,5 @@ namespace clxapi
         /// Property: Contains body values.
         /// </summary>
         public string Body { get; set; }
-
-        /// <summary>
-        /// Property: Contains errormessage.
-        /// </summary>
-        public string Error { get; set; }
     }
 }

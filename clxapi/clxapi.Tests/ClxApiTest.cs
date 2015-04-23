@@ -58,6 +58,7 @@ namespace clxapi.Tests
             Assert.AreEqual(data.numberOfSubscribers, 1);
         }
 
+
         [TestMethod]
         public void TestGetGateways()
         {
