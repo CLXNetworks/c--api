@@ -85,13 +85,13 @@ namespace clxapi.Client
         /// <returns>Jarray or Jobject</returns>
         private dynamic parseReponse(ClxResponse response)
         {
-            dynamic parsedBody = null;
+            dynamic parsedBody;
             try
             {
                 parsedBody = JValue.Parse(response.Body);
             }
             catch{
-                throw new NotImplementedException();
+                throw new ClxException("Error when parsing Json");
             }
 
             
@@ -101,15 +101,7 @@ namespace clxapi.Client
             {
                 string message = parsedBody.error.message;
                 int code = parsedBody.error.code;
-                switch (response.StatusCode)
-                {
-                    case 400:
-                        throw new ClxApiException(message, code);
-                    case 404:
-                        throw new ClxApiException(message, code);
-                    default:
-                        throw new ClxApiException(message, code);
-                }
+                throw new ClxApiException(message, code);
             }
 
             return parsedBody;

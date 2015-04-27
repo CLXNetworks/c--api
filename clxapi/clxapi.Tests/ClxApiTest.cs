@@ -17,10 +17,23 @@ namespace clxapi.Tests
     [TestClass]
     public class ClxApiTests
     {
+
+        [TestMethod]
+        public void TestCanChangeBaseUrlOfClient()
+        {
+            ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" });
+            ClxSettings settings = new ClxSettings();
+            Assert.AreEqual(clxApi.Client.BaseURL, settings.BaseURI);
+
+            clxApi.SetBaseUrl("newBaseUrl");
+            Assert.AreNotEqual(clxApi.Client.BaseURL, settings.BaseURI);
+            Assert.AreEqual(clxApi.Client.BaseURL, "newBaseUrl");
+        }
+
         [TestMethod]
         public void TestGetOperators()
         {
-            ClxTestAdapter testAdapter= new ClxTestAdapter();
+            ClxTestAdapter testAdapter= new ClxTestAdapter(new ClxResponse());
             ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }, testAdapter);
             clxApi.SetBaseUrl("https://TEST");
             var data = clxApi.GetOperators();
@@ -41,7 +54,7 @@ namespace clxapi.Tests
         [TestMethod]
         public void TestGetOperatorByID()
         {
-            ClxTestAdapter testAdapter = new ClxTestAdapter();
+            ClxTestAdapter testAdapter = new ClxTestAdapter(new ClxResponse());
             ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }, testAdapter);
             clxApi.SetBaseUrl("https://TEST");
             var data = clxApi.GetOperatorById(55);
@@ -62,7 +75,7 @@ namespace clxapi.Tests
         [TestMethod]
         public void TestGetGateways()
         {
-            ClxTestAdapter testAdapter = new ClxTestAdapter();
+            ClxTestAdapter testAdapter = new ClxTestAdapter(new ClxResponse());
             ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }, testAdapter);
             clxApi.SetBaseUrl("https://TEST");
             IEnumerable<Gateway> data = clxApi.GetGateways();
