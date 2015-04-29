@@ -90,22 +90,19 @@ namespace clxapi.Client
             {
                 parsedBody = JValue.Parse(response.Body);
             }
-            catch{
+            catch
+            {
                 throw new ClxException("Error when parsing Json");
             }
-
-            
-
             // TODO: Implement exception handling with custom exceptions.
             if (response.StatusCode > 399)
             {
                 string message = parsedBody.error.message;
                 int code = parsedBody.error.code;
+                // TODO: add errorcode from wrapper.
                 throw new ClxApiException(message, code);
             }
-
-            return parsedBody;
-            
+            return parsedBody;          
         }
     }
 }

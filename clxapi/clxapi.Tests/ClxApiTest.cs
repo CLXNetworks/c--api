@@ -10,6 +10,7 @@ using clxapi;
 using clxapi.Client;
 using clxapi.Adapter;
 using clxapi.Tests.Adapter;
+using clxapi.App_Data;
 
 
 namespace clxapi.Tests
@@ -19,7 +20,7 @@ namespace clxapi.Tests
     {
 
         [TestMethod]
-        public void TestCanChangeBaseUrlOfClient()
+        public void CanChangeBaseUrlOfClient()
         {
             ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" });
             ClxSettings settings = new ClxSettings();
@@ -31,11 +32,16 @@ namespace clxapi.Tests
         }
 
         [TestMethod]
-        public void TestGetOperators()
+        public void AssertClxApiCanGetOperators()
         {
-            ClxTestAdapter testAdapter= new ClxTestAdapter(new ClxResponse());
+            TestData testdata = new TestData();
+
+            ClxResponse response = new ClxResponse();
+            response.Body = testdata.operators;
+            response.StatusCode = 200;
+
+            ClxTestAdapter testAdapter = new ClxTestAdapter(response);
             ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }, testAdapter);
-            clxApi.SetBaseUrl("https://TEST");
             var data = clxApi.GetOperators();
 
             Assert.IsInstanceOfType(data, typeof(IEnumerable<Operator>));
@@ -49,15 +55,25 @@ namespace clxapi.Tests
             Assert.AreEqual(data.ToList()[1].operationalState, "inactive");
             Assert.AreEqual(data.ToList()[1].uniqueName, "Bella");
             Assert.AreEqual(data.ToList()[1].numberOfSubscribers, 8888);
+
+            Assert.AreEqual(clxApi.Client.BaseURL + ClxSettings.OperatorPath, testAdapter.FullUrl);
         }
 
         [TestMethod]
-        public void TestGetOperatorByID()
+        public void AssertClxApiCanGetOperatorByID()
         {
-            ClxTestAdapter testAdapter = new ClxTestAdapter(new ClxResponse());
+            TestData testdata = new TestData();
+
+            ClxResponse response = new ClxResponse();
+            response.Body = testdata.@operator;
+            response.StatusCode = 200;
+            
+
+            ClxTestAdapter testAdapter = new ClxTestAdapter(response);
             ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }, testAdapter);
-            clxApi.SetBaseUrl("https://TEST");
-            var data = clxApi.GetOperatorById(55);
+            clxApi.SetBaseUrl("Https://TEST");
+            int id = 55;
+            Operator data = clxApi.GetOperatorById(id);
 
             Assert.IsInstanceOfType(data, typeof(Operator));
             Assert.IsNotNull(data);
@@ -69,15 +85,23 @@ namespace clxapi.Tests
             Assert.AreEqual(data.operationalState, "active");
             Assert.AreEqual(data.uniqueName, "Testing");
             Assert.AreEqual(data.numberOfSubscribers, 1);
+
+            Assert.AreEqual(clxApi.Client.BaseURL + ClxSettings.OperatorPath + id, testAdapter.FullUrl);
         }
 
 
         [TestMethod]
-        public void TestGetGateways()
+        public void AssertClxApiCanGetGateways()
         {
-            ClxTestAdapter testAdapter = new ClxTestAdapter(new ClxResponse());
+            TestData testdata = new TestData();
+
+            ClxResponse response = new ClxResponse();
+            response.Body = testdata.Gateways;
+            response.StatusCode = 200;
+
+            ClxTestAdapter testAdapter = new ClxTestAdapter(response);
             ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }, testAdapter);
-            clxApi.SetBaseUrl("https://TEST");
+            clxApi.SetBaseUrl("Https://TEST");
             IEnumerable<Gateway> data = clxApi.GetGateways();
 
             Assert.AreEqual(data.ToList().Count, 3);
@@ -90,10 +114,12 @@ namespace clxapi.Tests
             Assert.AreEqual(data.ToList()[1].name, "AnotherString");
             Assert.AreEqual(data.ToList()[1].type, "AnotherString");
             Assert.AreEqual(data.ToList()[2].name, "HelgiMobile");
+
+            Assert.AreEqual(clxApi.Client.BaseURL + ClxSettings.GatewayPath, testAdapter.FullUrl );
         }
 
         [TestMethod]
-        public void TestTestGetOperatorsTestAPI()
+        public void AssertClxApiCanGetOperatorsTestAPI()
         {
             var clxApi = new ClxApi(new string[] { "Username", "Password" });
             clxApi.SetBaseUrl("http://localhost:1129/api");
@@ -113,7 +139,7 @@ namespace clxapi.Tests
         }
 
         [TestMethod]
-        public void TestTestGetOperatorsByIdTestAPI()
+        public void AssertClxApiCanGetOperatorsByIdTestAPI()
         {
 
             var clxApi = new ClxApi(new string[] { "Username", "Password" });

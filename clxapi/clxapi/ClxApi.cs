@@ -116,6 +116,7 @@ namespace clxapi
         {
             var result = _httpClient.Get(ClxSettings.GatewayPath);
             var gateways = result.ToObject<List<Gateway>>();
+          
 
             return gateways;
         }
