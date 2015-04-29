@@ -90,6 +90,7 @@ namespace clxapi.Tests
         }
 
 
+
         [TestMethod]
         public void AssertClxApiCanGetGateways()
         {
@@ -119,44 +120,25 @@ namespace clxapi.Tests
         }
 
         [TestMethod]
-        public void AssertClxApiCanGetOperatorsTestAPI()
+        public void AssertClxApiCanGetGatewayByID()
         {
-            var clxApi = new ClxApi(new string[] { "Username", "Password" });
-            clxApi.SetBaseUrl("http://localhost:1129/api");
-            var data = clxApi.GetOperators();
+            TestData testdata = new TestData();
+            ClxResponse response = new ClxResponse();
+            response.Body = testdata.Gateway;
+            response.StatusCode = 200;
 
-            Assert.IsInstanceOfType(data, typeof(IEnumerable<Operator>));
+            ClxTestAdapter testAdapter = new ClxTestAdapter(response);
+            ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }, testAdapter);
+            int id = 1888;
+            Gateway data = clxApi.GetGatewayById(id);
+
+            Assert.IsInstanceOfType(data, typeof(Gateway));
             Assert.IsNotNull(data);
-            Assert.AreEqual(data.ToList()[0].id, 1);
-            Assert.AreEqual(data.ToList()[0].name, "Testoperatpor");
-            Assert.AreEqual(data.ToList()[0].isoCountryCode, "5");
-            Assert.AreEqual(data.ToList()[1].network, "Secretary");
-            Assert.AreEqual(data.ToList()[1].operationalStatDate, "-0001-11-30 00:00:00");
-            Assert.AreEqual(data.ToList()[1].operationalState, "inactive");
-            Assert.AreEqual(data.ToList()[1].uniqueName, "Bella");
-            Assert.AreEqual(data.ToList()[1].numberOfSubscribers, 8888);
-            
-        }
+            Assert.AreEqual(data.id, 1888);
+            Assert.AreEqual(data.name, "Demo");
+            Assert.AreEqual(data.type, "TestSupplier");
 
-        [TestMethod]
-        public void AssertClxApiCanGetOperatorsByIdTestAPI()
-        {
-
-            var clxApi = new ClxApi(new string[] { "Username", "Password" });
-            clxApi.SetBaseUrl("http://localhost:1129/api");
-            var data = clxApi.GetOperatorById(1);
-
-            Assert.IsInstanceOfType(data, typeof(Operator));
-            Assert.IsNotNull(data);
-
-            Assert.AreEqual(data.id, 1);
-            Assert.AreEqual(data.name, "Testoperatpor");
-            Assert.AreEqual(data.isoCountryCode, "5");
-            Assert.AreEqual(data.network, "TestNetwork");
-            Assert.AreEqual(data.operationalStatDate, "-0001-11-30 00:00:00");
-            Assert.AreEqual(data.operationalState, "active");
-            Assert.AreEqual(data.uniqueName, "Testing");
-            Assert.AreEqual(data.numberOfSubscribers, 1);
+            Assert.AreEqual(clxApi.Client.BaseURL + ClxSettings.GatewayPath + id, testAdapter.FullUrl);
         }
     }
 }

@@ -98,5 +98,19 @@ namespace clxapi.App_Data
                 return JsonConvert.SerializeObject(gateways);
             }          
         }
+          public string Gateway
+        {
+            get
+            {
+                var gateway = new Gateway
+                      {
+                          id = 1888,
+                          name = "Demo",
+                          type = "TestSupplier"
+                      };
+                return JsonConvert.SerializeObject(gateway);
+            }
+        }
+
     }
 }

@@ -58,11 +58,12 @@ namespace clxapi.Client
         /// Handles Requests of type POST. Not implemented
         /// </summary>
         /// <param name="url">resourse String</param>
+        /// <param name="body">body String</param>
         /// <returns>Jarray or Jobject (dynamic)</returns>
-        public dynamic Post(String url)
+        public dynamic Post(String url, string body)
         {
             string fullUrl = BaseURL + url;
-            ClxResponse response = HttpAdapter.Post(fullUrl);
+            ClxResponse response = HttpAdapter.Post(fullUrl, body);
             return parseReponse(response);
         }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 
 namespace clxapi
 {
@@ -43,5 +44,13 @@ namespace clxapi
         /// Property for databinding.
         /// </summary>
         public int numberOfSubscribers { get; set; }
+        /// <summary>
+        /// Method used to Serialize property values from Operator.
+        /// </summary>
+        /// <returns>String of property values</returns>
+        public string Stringyfy()
+        {
+           return JsonConvert.SerializeObject(this);
+        }
     }
 }

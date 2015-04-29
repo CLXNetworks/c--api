@@ -92,10 +92,10 @@ namespace clxapi
         public Operator GetOperatorById(int id) 
         {
             var result = _httpClient.Get(ClxSettings.OperatorPath +id);
-            var operators = result.ToObject<Operator>();
+            var @operator = result.ToObject<Operator>();
 
 
-            return operators;
+            return @operator;
         }
 
         /**************
@@ -201,6 +201,5 @@ namespace clxapi
             var priceEntries = result.ToObject<PriceEntry>();
             return priceEntries;
         }
-
     }
 }

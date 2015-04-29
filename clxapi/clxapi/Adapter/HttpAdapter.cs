@@ -35,17 +35,18 @@ namespace clxapi.Adapter
         /// <returns>ClxResponse class</returns>
         public ClxResponse Get(string url) 
         {
-            return Execute(url);
+            return Execute("GET", url);
         }
 
         /// <summary>
         /// Method used by POST Requests
         /// </summary>
         /// <param name="url">string representing selected resource in api.</param>
+        /// <param name="body">string representing body of post.</param>
         /// <returns>throws new NotImplementedException</returns>
-        public ClxResponse Post(string url)
+        public ClxResponse Post(string url, string body)
         {
-            throw new NotImplementedException();
+            return Execute("POST", url, body);
         }
 
         /// <summary>
@@ -61,14 +62,30 @@ namespace clxapi.Adapter
         /// <summary>
         /// All Requests to Clx api goes through Execute.
         /// </summary>
+        /// <param name="method">Type of Webrequest, GET,POST or PUT</param>
         /// <param name="url">string representing selected resource in api.</param>
+        /// <param name="body">Default parameter, If POST or PUT contains data</param>
         /// <returns>ClxResponse which contains statuscode,body,header and error of request.</returns>
-        private ClxResponse Execute(string url)
+        private ClxResponse Execute(string method, string url, string body = null)
         {
             ClxResponse res = new ClxResponse();
             try
             {
                 WebRequest webRequest = WebRequest.Create(url);
+                webRequest.Method = method;
+                if(method == "POST")
+                {
+                    webRequest.ContentType = "text/json";
+
+                    using (var streamWriter = new StreamWriter(webRequest.GetRequestStream()))
+                    {
+                        string json = body;
+
+                        streamWriter.Write(json);
+                        streamWriter.Flush();
+                        streamWriter.Close();
+                    }
+                }
                 String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(Auth[0] + ":" + Auth[1]));
                 webRequest.Headers.Add("Authorization", "Basic " + encoded);
    
@@ -78,7 +95,8 @@ namespace clxapi.Adapter
                 {
                     string result = reader.ReadToEnd();
                     res.Body = result;
-                    res.StatusCode = 200;
+                    HttpWebResponse validResponse = response as HttpWebResponse;
+                    res.StatusCode = (int)validResponse.StatusCode;
                     return res; 
                 }               
             }
