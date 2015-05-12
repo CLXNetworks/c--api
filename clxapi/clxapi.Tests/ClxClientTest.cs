@@ -11,6 +11,7 @@ namespace clxapi.Tests
     [TestClass] 
     public class ClxClientTest
     {
+        //TODO: Add test for Post and Put in ClxHttpClient
         [TestMethod]
         public void AssertHttpClientInitializeCorrectDefaultBaseUrl()
         {
@@ -42,7 +43,7 @@ namespace clxapi.Tests
             ClxTestAdapter testAdapter = new ClxTestAdapter(response);
             ClxApi clxApi = new ClxApi(new string[] { "Username", "Password"},testAdapter );
             var client = clxApi.Client;
-            client.Get("TestString");
+            client.Get("/TESTSTRING/");
         }
 
         [TestMethod]
@@ -54,7 +55,7 @@ namespace clxapi.Tests
             ClxTestAdapter testAdapter = new ClxTestAdapter(response);
             ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }, testAdapter);
             var client = clxApi.Client;
-            client.Get("TestString");
+            client.Get("/TESTSTRING/");
         }
 
         [TestMethod]
@@ -65,7 +66,7 @@ namespace clxapi.Tests
             ClxTestAdapter testAdapter = new ClxTestAdapter(response);
             ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }, testAdapter);
             var client = clxApi.Client;
-            var parsedResponse =client.Get("TestString");
+            var parsedResponse = client.Put("/TESTSTRING/","{Placeholder:NotImportant}");
 
             Assert.AreEqual("{}", parsedResponse.ToString());
         }
@@ -82,17 +83,17 @@ namespace clxapi.Tests
             var client = clxApi.Client;
             try
             {
-                client.Get("/TESTSTRING/");
+                client.Post("/TESTSTRING/", "{Placeholder:NotImportant}");
             }
             catch (ClxApiException e)
             {
                 var errorMessage = e.ClxErrorMessage;
                 var errorCode = e.ClxErrorCode;
                 Assert.IsNotNull(errorMessage);
-                Assert.AreEqual(errorMessage,"You made a bad request");
-                Assert.IsInstanceOfType(errorMessage,typeof(string));
+                Assert.AreEqual("You made a bad request",errorMessage);
+                Assert.IsInstanceOfType(errorMessage, typeof(string));
                 Assert.IsNotNull(errorCode);
-                Assert.AreEqual(errorCode, 4000);
+                Assert.AreEqual(4000, errorCode);
                 Assert.IsInstanceOfType(errorCode, typeof(int));
             }
         }

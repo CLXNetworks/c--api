@@ -14,7 +14,7 @@ namespace clxapi.Tests
 {
     [TestClass]
     public class ClxHttpAdapterTest
-    { // TODO add https for all test.
+    { 
        
         [TestMethod]
         public void AssertAdaptertCanHttpAuthWithCorrectAuth()
