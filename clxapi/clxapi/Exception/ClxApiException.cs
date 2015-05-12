@@ -22,20 +22,20 @@ namespace clxapi
         /// <summary>
         /// Constructor set message.
         /// </summary>
-        /// <param name="message">Errormessage</param>
-        public ClxApiException(string message)
+        /// <param name="clxErrorMessage">Errormessage</param>
+        public ClxApiException(string clxErrorMessage)
         {
-            ClxErrorMessage = message;
+            ClxErrorMessage = clxErrorMessage;
         }
         /// <summary>
         /// Constructor set message and code.
         /// </summary>
-        /// <param name="message">Errormessage</param>
-        /// <param name="code">ErrorCode</param>
-        public ClxApiException(string message, int code)
+        /// <param name="clxErrorMessage">Errormessage</param>
+        /// <param name="clxErrorCode">ErrorCode</param>
+        public ClxApiException(string clxErrorMessage, int clxErrorCode)
         {
-            ClxErrorMessage = message;
-            ClxErrorCode = code;
+            ClxErrorMessage = clxErrorMessage;
+            ClxErrorCode = clxErrorCode;
         }
     }
 }

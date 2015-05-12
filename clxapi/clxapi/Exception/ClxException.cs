@@ -13,7 +13,7 @@ namespace clxapi
     {
 
         /// <summary>
-        /// TODO: Implement Custom Exception class.
+        /// ClxException class inherit from Exception.
         /// </summary>
         /// <param name="message">Errormessage</param>
         public ClxException (string message)

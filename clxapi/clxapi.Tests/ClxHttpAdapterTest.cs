@@ -14,7 +14,84 @@ namespace clxapi.Tests
 {
     [TestClass]
     public class ClxHttpAdapterTest
-    {
+    { // TODO add https for all test.
+       
+        [TestMethod]
+        public void AssertAdaptertCanHttpAuthWithCorrectAuth()
+        {
+            HttpAdapter httpAdapter = new HttpAdapter();
+            httpAdapter.Auth = new string[] { "correctUsername", "correctPassword" };
+
+            ClxResponse httpResponse = httpAdapter.Get("Http://httpbin.org/basic-auth/correctUsername/correctPassword");
+
+            Assert.AreEqual(200, httpResponse.StatusCode);    
+        }
+
+        [TestMethod]
+        public void HttpAdapterCatchBadRequest() 
+        {
+            HttpAdapter httpAdapter = new HttpAdapter();
+            httpAdapter.Auth = new string[] { "Username", "Password" };
+
+            ClxResponse httpsResponse = httpAdapter.Get("https://httpbin.org/status/400");
+            Assert.AreEqual(400, httpsResponse.StatusCode);
+        }
+
+        [TestMethod]
+        public void HttpAdapterCatchNotFound()
+        {
+            HttpAdapter httpAdapter = new HttpAdapter();
+            httpAdapter.Auth = new string[] { "Username", "Password" };
+
+            ClxResponse httpsResponse = httpAdapter.Get("https://httpbin.org/status/404");
+            Assert.AreEqual(404, httpsResponse.StatusCode);
+        }
+
+        [TestMethod]
+        public void HttpAdaptercatchInternalServerErrors()
+        {
+            HttpAdapter httpAdapter = new HttpAdapter();
+            httpAdapter.Auth = new string[] { "Username", "Password" };
+
+            ClxResponse httpResponse = httpAdapter.Get("http://httpbin.org/status/450");
+            Assert.AreEqual(500, httpResponse.StatusCode);
+
+            ClxResponse httpsResponse = httpAdapter.Get("https://httpbin.org/status/500");
+            Assert.AreEqual(500, httpsResponse.StatusCode);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof( ClxException))]
+        public void HttpAdaptercatchExceptions()
+        {
+            HttpAdapter httpAdapter = new HttpAdapter();
+
+            ClxResponse httpResponse = httpAdapter.Get("http://HackedRequestWithoutSetAuth");
+        }
+
+        [TestMethod]
+        public void AssertAdaptertCanHttpsAuthWithCorrectAuth()
+        {
+            HttpAdapter httpAdapter = new HttpAdapter();
+            httpAdapter.Auth = new string[] { "correctUsername", "correctPassword" };
+       
+            ClxResponse httpsResponse = httpAdapter.Get("Https://httpbin.org/basic-auth/correctUsername/correctPassword");
+            Assert.AreEqual(200, httpsResponse.StatusCode);
+
+        }
+
+        [TestMethod]
+        public void AuthWithIncorrectUsername()
+        {
+            HttpAdapter httpAdapter = new HttpAdapter();
+            httpAdapter.Auth = new string[] { "wrongUsername", "correctPassword" };
+
+            ClxResponse response = httpAdapter.Get("Http://httpbin.org/basic-auth/correctUsername/correctPassword");
+
+            Assert.AreEqual(401, response.StatusCode);
+        }
+
+        
 
         [TestMethod]
         public void AssertAdaptertCanGet()
@@ -74,7 +151,8 @@ namespace clxapi.Tests
 
             ClxResponse response = httpAdapter.Post("Http://httpbin.org/post", stringifiedData);
 
-            Assert.AreEqual(response.StatusCode, 200);
+            List<int> list = new List<int>() { 200, 201};
+            CollectionAssert.Contains(list,response.StatusCode);
             JObject body = JObject.Parse(response.Body);
             Operator objectReturned = body["json"].ToObject<Operator>();
 
