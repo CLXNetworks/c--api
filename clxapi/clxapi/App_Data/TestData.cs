@@ -98,6 +98,9 @@ namespace clxapi.App_Data
                 return JsonConvert.SerializeObject(gateways);
             }          
         }
+        /// <summary>
+        /// Returns one Gateway object for Tests.
+        /// </summary>
           public string Gateway
         {
             get
