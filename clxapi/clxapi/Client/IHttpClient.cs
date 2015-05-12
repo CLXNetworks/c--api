@@ -31,15 +31,16 @@ namespace clxapi.Client
         /// Handles Requests of type POST.
         /// </summary>
         /// <param name="url">resourse String</param>
-        /// /// <param name="body">resourse String</param>
+        /// <param name="body">Body in form of a String</param>
         /// <returns>Jarray or Jobject (dynamic)</returns>
-        dynamic Post(string url,string body);
+        dynamic Post(string url, string body);
 
         /// <summary>
         /// Handles Requests of type PUT.
         /// </summary>
         /// <param name="url">resourse String</param>
+        /// <param name="body">Body in form of a String</param>
         /// <returns>Jarray or Jobject (dynamic)</returns>
-        dynamic Put(string url);
+        dynamic Put(string url, string body);
     }
 }

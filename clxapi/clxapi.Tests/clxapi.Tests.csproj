@@ -56,7 +56,7 @@
     <Compile Include="ClxApiTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ClxClientTest.cs" />
-    <Compile Include="ClxAdapterTest.cs" />
+    <Compile Include="ClxHttpAdapterTest.cs" />
     <Compile Include="ClxSettingsTest.cs" />
   </ItemGroup>
   <ItemGroup>

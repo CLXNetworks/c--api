@@ -28,7 +28,8 @@ namespace clxapi.Adapter
         /// Method used by PUT Requests
         /// </summary>
         /// <param name="url">string representing selected resource in api.</param>
+        /// <param name="body">string representing body of PUT.</param> 
         /// <returns>throws new NotImplementedException</returns>
-        ClxResponse Put(string url);  
+        ClxResponse Put(string url, string body);  
     }
 }

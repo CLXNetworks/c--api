@@ -42,7 +42,7 @@ namespace clxapi.Adapter
         /// Method used by POST Requests
         /// </summary>
         /// <param name="url">string representing selected resource in api.</param>
-        /// <param name="body">string representing body of post.</param>
+        /// <param name="body">string representing body of POST.</param>
         /// <returns>throws new NotImplementedException</returns>
         public ClxResponse Post(string url, string body)
         {
@@ -53,10 +53,11 @@ namespace clxapi.Adapter
         /// Method used by PUT Requests
         /// </summary>
         /// <param name="url">string representing selected resource in api.</param>
+        /// <param name="body">string representing body of PUT.</param> 
         /// <returns>throws new NotImplementedException</returns>
-        public ClxResponse Put(string url)
+        public ClxResponse Put(string url, string body)
         {
-            throw new NotImplementedException();
+            return Execute("PUT", url, body);
         }
 
         /// <summary>
@@ -73,7 +74,8 @@ namespace clxapi.Adapter
             {
                 WebRequest webRequest = WebRequest.Create(url);
                 webRequest.Method = method;
-                if(method == "POST")
+
+                if (webRequest.Method == "POST" || webRequest.Method == "PUT")
                 {
                     webRequest.ContentType = "text/json";
 
