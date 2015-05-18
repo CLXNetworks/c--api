@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Topics>
-  <Topic id="dfb6dc24-1242-40b7-9862-0c5da02bb6d0" visible="True" isDefault="true" isSelected="true" title="Welcome to the [TODO: Add project name]">
+  <Topic id="dfb6dc24-1242-40b7-9862-0c5da02bb6d0" visible="False" isSelected="true" title="Welcome to the documenation for Clx Api C# wrapper.">
     <HelpKeywords>
       <HelpKeyword index="K" term="Welcome" />
     </HelpKeywords>
   </Topic>
-  <Topic id="a71e6bbf-20e3-4a1e-ae0a-02ab91ed7573" visible="True" isExpanded="true" title="Version History">
+  <Topic id="a71e6bbf-20e3-4a1e-ae0a-02ab91ed7573" visible="False" isExpanded="true" title="Version History">
     <HelpKeywords>
       <HelpKeyword index="K" term="version, history" />
     </HelpKeywords>
-    <Topic id="c237ceee-97c6-4f3b-a327-560ab5697f26" visible="True" title="Version 1.0.0.0">
+    <Topic id="c237ceee-97c6-4f3b-a327-560ab5697f26" visible="False" title="Version 1.0.0.0">
       <HelpKeywords>
         <HelpKeyword index="K" term="version, 1.0.0.0" />
       </HelpKeywords>
