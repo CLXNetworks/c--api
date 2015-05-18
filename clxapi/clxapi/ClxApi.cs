@@ -173,8 +173,8 @@ namespace clxapi
         /// </example>
         /// <param name="gatewayId">Id of selected gateway</param>
         /// <param name="operatorId">Id of selected operator</param>
-        /// <returns>Ienumerable list of all price entries by selected gateway id and operator id.</returns>
-        public IEnumerable<PriceEntry> GetPriceEntriesByGatewayIdAndOperatorId(int gatewayId, int operatorId)
+        /// <returns>PriceEntry by selected gateway id and operator id.</returns>
+        public PriceEntry GetPriceEntriesByGatewayIdAndOperatorId(int gatewayId, int operatorId)
         {
             var result = _httpClient.Get(ClxSettings.GatewayPath +gatewayId +ClxSettings.PricePath +operatorId);
             var priceEntries = result.ToObject<PriceEntry>();
@@ -193,7 +193,7 @@ namespace clxapi
         /// <param name="gatewayId">Id of selected gateway</param>
         /// <param name="operatorId">Id of selected operator</param>
         /// <param name="date">Selected date</param>
-        /// <returns>Ienumerable list of all price entries by selected gateway id and operator id selected by Date.</returns>
+        /// <returns>PriceEntry by selected gateway id and operator id and operator id selected by Date.</returns>
         public PriceEntry GetPriceEntriesByGatewayIdAndOperatorIdAndDate(int gatewayId, int operatorId, DateTime date)
         {
             var selectedDateParam = String.Format("{0},{1}", ClxSettings.DateParam, date);
