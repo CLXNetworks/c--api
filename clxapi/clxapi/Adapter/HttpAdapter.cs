@@ -33,7 +33,7 @@ namespace clxapi.Adapter
         /// </summary>
         /// <param name="url">string representing selected resource in api.</param>
         /// <returns>ClxResponse class</returns>
-        public ClxResponse Get(string url) 
+        public ClxResponse Get(string url)
         {
             return Execute("GET", url);
         }
@@ -69,7 +69,7 @@ namespace clxapi.Adapter
         /// <returns>ClxResponse which contains statuscode,body,header and error of request.</returns>
         private ClxResponse Execute(string method, string url, string body = null)
         {
-            ClxResponse res = new ClxResponse();
+            ClxResponse response = new ClxResponse();
 
             try
             {
@@ -80,51 +80,49 @@ namespace clxapi.Adapter
                 {
                     webRequest.ContentType = "text/json";
 
+                    // Add body to webRequest
                     using (var streamWriter = new StreamWriter(webRequest.GetRequestStream()))
                     {
-                        string json = body;
-
-                        streamWriter.Write(json);
+                        streamWriter.Write(body);
                         streamWriter.Flush();
                         streamWriter.Close();
                     }
                 }
+                // Basic Authentication, encoding username and password of user.
                 String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(Auth[0] + ":" + Auth[1]));
                 webRequest.Headers.Add("Authorization", "Basic " + encoded);
 
-                using(WebResponse response = webRequest.GetResponse())
-                using (Stream content = response.GetResponseStream())
+                using (WebResponse webResponse = webRequest.GetResponse())
+                using (Stream content = webResponse.GetResponseStream())
                 using (StreamReader reader = new StreamReader(content))
                 {
                     string result = reader.ReadToEnd();
-                    res.Body = result;
-                    HttpWebResponse validResponse = response as HttpWebResponse;
-                    res.StatusCode = (int)validResponse.StatusCode;
-                    return res; 
-                }               
+                    response.Body = result;
+                    HttpWebResponse validResponse = webResponse as HttpWebResponse;
+                    response.StatusCode = (int)validResponse.StatusCode;
+                    return response;
+                }
             }
             catch (WebException e)
             {
                 HttpWebResponse errorResponse = e.Response as HttpWebResponse;
                 using (errorResponse)
                 {
+                    // Since WebResponse throw exception, have to GetResponseStream of exception and parse Clx Api error.
                     using (var reader = new StreamReader(errorResponse.GetResponseStream()))
                     {
-                        res.Body = reader.ReadToEnd();
-                        if (string.IsNullOrEmpty(res.Body))
-                        {
-                            res.ErrorMessage = e.Message;
-                        }
+                        response.Body = reader.ReadToEnd();
+                        response.ErrorMessage = e.Message;
                     }
-                    res.StatusCode = (int)errorResponse.StatusCode;
-                    return res;            
-                }                          
+                    response.StatusCode = (int)errorResponse.StatusCode;
+                    return response;
+                }
             }
             catch (Exception e)
             {
-                res.ErrorMessage = e.Message;
-                return res;
-            }  
+                response.ErrorMessage = e.Message;
+                return response;
+            }
         }
     }
 }

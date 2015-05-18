@@ -11,7 +11,6 @@ namespace clxapi.Tests
     [TestClass] 
     public class ClxClientTest
     {
-        //TODO: Add test for Post and Put in ClxHttpClient
         [TestMethod]
         public void AssertHttpClientInitializeCorrectDefaultBaseUrl()
         {
@@ -95,6 +94,7 @@ namespace clxapi.Tests
                 Assert.IsNotNull(errorCode);
                 Assert.AreEqual(4000, errorCode);
                 Assert.IsInstanceOfType(errorCode, typeof(int));
+                Assert.AreEqual(400, e.StatusCode);
             }
         }
     }

@@ -78,7 +78,8 @@ namespace clxapi
         /// catch (ClxApiException e)
         /// {
         ///     string clxErrrorMessage = e.ClxErrorMessage;
-        ///     int clxErrorCode = e.ClxErrorCode;
+        ///     int? clxErrorCode = e.ClxErrorCode;
+        ///     int statusCode = e.StatusCode;
         /// }
         /// </code>
         /// </example>
@@ -108,7 +109,8 @@ namespace clxapi
         /// catch (ClxApiException e)
         /// {
         ///     string clxErrrorMessage = e.ClxErrorMessage;
-        ///     int clxErrorCode = e.ClxErrorCode;
+        ///     int? clxErrorCode = e.ClxErrorCode;
+        ///     int statusCode = e.StatusCode;
         /// }
         /// </code>
         /// </example>
@@ -144,7 +146,8 @@ namespace clxapi
         /// catch (ClxApiException e)
         /// {
         ///     string clxErrrorMessage = e.ClxErrorMessage;
-        ///     int clxErrorCode = e.ClxErrorCode;
+        ///     int? clxErrorCode = e.ClxErrorCode;
+        ///     int statusCode = e.StatusCode;
         /// }
         /// </code>
         /// </example>
@@ -175,7 +178,8 @@ namespace clxapi
         /// catch (ClxApiException e)
         /// {
         ///     string clxErrrorMessage = e.ClxErrorMessage;
-        ///     int clxErrorCode = e.ClxErrorCode;
+        ///     int? clxErrorCode = e.ClxErrorCode;
+        ///     int statusCode = e.StatusCode;
         /// }
         /// </code>
         /// </example>
@@ -210,7 +214,8 @@ namespace clxapi
         /// catch (ClxApiException e)
         /// {
         ///     string clxErrrorMessage = e.ClxErrorMessage;
-        ///     int clxErrorCode = e.ClxErrorCode;
+        ///     int? clxErrorCode = e.ClxErrorCode;
+        ///     int statusCode = e.StatusCode;
         /// }
         /// </code>
         /// </example>
@@ -240,7 +245,8 @@ namespace clxapi
         /// catch (ClxApiException e)
         /// {
         ///     string clxErrrorMessage = e.ClxErrorMessage;
-        ///     int clxErrorCode = e.ClxErrorCode;
+        ///     int? clxErrorCode = e.ClxErrorCode;
+        ///     int statusCode = e.StatusCode;
         /// }
         /// </code>
         /// </example>
@@ -271,7 +277,8 @@ namespace clxapi
         /// catch (ClxApiException e)
         /// {
         ///     string clxErrrorMessage = e.ClxErrorMessage;
-        ///     int clxErrorCode = e.ClxErrorCode;
+        ///     int? clxErrorCode = e.ClxErrorCode;
+        ///     int statusCode = e.StatusCode;
         /// }      
         /// </code>
         /// </example>

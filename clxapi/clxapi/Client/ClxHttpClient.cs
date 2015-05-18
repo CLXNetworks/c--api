@@ -104,10 +104,10 @@ namespace clxapi.Client
             }
 
             if (response.StatusCode > 399)
-            {
+            {               
                 string message = parsedBody.error.message;
-                int code = parsedBody.error.code;
-                throw new ClxApiException(message, code);
+                int? clxErrorCode = parsedBody.error.code;
+                throw new ClxApiException(message, clxErrorCode, response.StatusCode);
             }
 
             

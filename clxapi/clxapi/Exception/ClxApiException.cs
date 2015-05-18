@@ -14,21 +14,29 @@ namespace clxapi
         /// <summary>
         /// Property Containing Clx API internal Error Code.
         /// </summary>
-        public int ClxErrorCode { get; set; }
+        public int? ClxErrorCode { get; set; }
         /// <summary>
         /// Property Containing Clx API internal Error message.
         /// </summary>
         public string ClxErrorMessage { get; set; }
+        /// <summary>
+        /// Property Containing Http statuscode.
+        /// </summary>
+        public int StatusCode { get; set; }
 
         /// <summary>
         /// Constructor set message and code.
         /// </summary>
         /// <param name="clxErrorMessage">Errormessage</param>
         /// <param name="clxErrorCode">ErrorCode</param>
-        public ClxApiException(string clxErrorMessage, int clxErrorCode)
+        /// <param name="statusCode">ErrorCode</param>
+        public ClxApiException(string clxErrorMessage, int?  clxErrorCode, int statusCode)
         {
             ClxErrorMessage = clxErrorMessage;
             ClxErrorCode = clxErrorCode;
+            StatusCode = statusCode;
         }
+
+        
     }
 }
