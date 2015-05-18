@@ -67,7 +67,7 @@ namespace clxapi.Tests
             ClxResponse response = new ClxResponse();
             response.Body = testdata.@operator;
             response.StatusCode = 200;
-            
+
 
             ClxTestAdapter testAdapter = new ClxTestAdapter(response);
             ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }, testAdapter);
@@ -116,7 +116,7 @@ namespace clxapi.Tests
             Assert.AreEqual(data.ToList()[1].type, "AnotherString");
             Assert.AreEqual(data.ToList()[2].name, "HelgiMobile");
 
-            Assert.AreEqual(clxApi.Client.BaseURL + ClxSettings.GatewayPath, testAdapter.FullUrl );
+            Assert.AreEqual(clxApi.Client.BaseURL + ClxSettings.GatewayPath, testAdapter.FullUrl);
         }
 
         [TestMethod]
@@ -140,25 +140,23 @@ namespace clxapi.Tests
 
             Assert.AreEqual(clxApi.Client.BaseURL + ClxSettings.GatewayPath + id, testAdapter.FullUrl);
         }
-
         [TestMethod]
-        public void AssertClxApiCanGetOperatorsByIdTestAPI()
+        public void Test()
         {
-            //TODO remove this after developement done.
-            var clxApi = new ClxApi(new string[] { "username", "password" });
-            var data = clxApi.GetOperatorById(888888);
-
-            Assert.IsInstanceOfType(data, typeof(Operator));
-            Assert.IsNotNull(data);
-
-            Assert.AreEqual(data.id, 1);
-            Assert.AreEqual(data.name, "Testoperatpor");
-            Assert.AreEqual(data.isoCountryCode, "5");
-            Assert.AreEqual(data.network, "TestNetwork");
-            Assert.AreEqual(data.operationalStatDate, "-0001-11-30 00:00:00");
-            Assert.AreEqual(data.operationalState, "active");
-            Assert.AreEqual(data.uniqueName, "Testing");
-            Assert.AreEqual(data.numberOfSubscribers, 1);
+            try
+            {
+                var clxApi = new ClxApi(new string[] { "Username", "Password" });
+                Gateway gateway = clxApi.GetGatewayById(2182);
+            }
+            catch (ClxException e)
+            {
+                string errrorMessage = e.Message;
+            }
+            catch (ClxApiException e)
+            {
+                string clxErrrorMessage = e.ClxErrorMessage;
+                int clxErrorCode = e.ClxErrorCode;
+            }
         }
     }
 }

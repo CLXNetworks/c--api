@@ -16,12 +16,13 @@ namespace clxapi
         /// <summary>
         /// Property to set client for api.
         /// </summary>
-        public IHttpClient Client { 
-            get 
+        public IHttpClient Client
+        {
+            get
             {
                 return _httpClient;
-            } 
-        }    
+            }
+        }
 
         /// <summary>
         /// Constructor, Initialize with credentials array, It will then setup all other dependendancies in project.
@@ -65,8 +66,20 @@ namespace clxapi
         /// </summary>
         /// <example>Code example:
         /// <code> 
-        /// var clxApi = new ClxApi(new string[] { "Username", "Password" }); 
-        /// var operators = clxApi.GetOperators();
+        /// try
+        /// { 
+        ///     var clxApi = new ClxApi(new string[] { "Username", "Password" }); 
+        ///     var operators = clxApi.GetOperators();
+        /// }
+        /// catch (ClxException e)
+        /// {
+        ///     string errrorMessage = e.Message;
+        /// }
+        /// catch (ClxApiException e)
+        /// {
+        ///     string clxErrrorMessage = e.ClxErrorMessage;
+        ///     int clxErrorCode = e.ClxErrorCode;
+        /// }
         /// </code>
         /// </example>
         /// <returns>IEnumerable list of all operators</returns>
@@ -83,15 +96,27 @@ namespace clxapi
         /// </summary>
         /// <example>Code example:
         /// <code> 
-        /// var clxApi = new ClxApi(new string[] { "Username", "Password" }); 
-        /// Operator operator = clxApi.GetOperatorByID(14);
+        /// try
+        /// { 
+        ///     var clxApi = new ClxApi(new string[] { "Username", "Password" }); 
+        ///     var operator = clxApi.GetOperatorByID(14);
+        /// }
+        /// catch (ClxException e)
+        /// {
+        ///     string errrorMessage = e.Message;
+        /// }
+        /// catch (ClxApiException e)
+        /// {
+        ///     string clxErrrorMessage = e.ClxErrorMessage;
+        ///     int clxErrorCode = e.ClxErrorCode;
+        /// }
         /// </code>
         /// </example>
         /// <param name="id">Id of selected operator</param>
         /// <returns>Operator with selected id</returns>
-        public Operator GetOperatorById(int id) 
+        public Operator GetOperatorById(int id)
         {
-            var result = _httpClient.Get(ClxSettings.OperatorPath +id);
+            var result = _httpClient.Get(ClxSettings.OperatorPath + id);
             var @operator = result.ToObject<Operator>();
 
 
@@ -107,16 +132,28 @@ namespace clxapi
         /// </summary>
         /// <example> Code example:
         /// <code>
-        /// var clxApi = new ClxApi(new string[] { "Username", "Password" });
-        /// var gateways = clxApi.GetGateways();
+        /// try
+        /// {
+        ///     var clxApi = new ClxApi(new string[] { "Username", "Password" });
+        ///     var gateways = clxApi.GetGateways();
+        /// }
+        /// catch (ClxException e)
+        /// {
+        ///     string errrorMessage = e.Message;
+        /// }
+        /// catch (ClxApiException e)
+        /// {
+        ///     string clxErrrorMessage = e.ClxErrorMessage;
+        ///     int clxErrorCode = e.ClxErrorCode;
+        /// }
         /// </code>
         /// </example>
-        /// <returns>IEnumerable list of all gateways</returns>
+        /// <returns>List of all gateways</returns>
         public IEnumerable<Gateway> GetGateways()
         {
             var result = _httpClient.Get(ClxSettings.GatewayPath);
             var gateways = result.ToObject<List<Gateway>>();
-          
+
 
             return gateways;
         }
@@ -126,15 +163,27 @@ namespace clxapi
         /// </summary>
         /// <example>Code example:
         /// <code> 
-        /// var clxApi = new ClxApi(new string[] { "Username", "Password" }); 
-        /// Gateway gateway = clxApi.GetGatewayById(2182);
+        /// try
+        /// {
+        ///     var clxApi = new ClxApi(new string[] { "Username", "Password" });
+        ///     var gateway = clxApi.GetGatewayById(2182);
+        /// }
+        /// catch (ClxException e)
+        /// {
+        ///     string errrorMessage = e.Message;
+        /// }
+        /// catch (ClxApiException e)
+        /// {
+        ///     string clxErrrorMessage = e.ClxErrorMessage;
+        ///     int clxErrorCode = e.ClxErrorCode;
+        /// }
         /// </code>
         /// </example>
         /// <param name="id">Id of selected gateway</param>
         /// <returns>Gateway with selected id</returns>
         public Gateway GetGatewayById(int id)
         {
-            var result = _httpClient.Get(ClxSettings.GatewayPath +id);
+            var result = _httpClient.Get(ClxSettings.GatewayPath + id);
             var gateways = result.ToObject<Gateway>();
 
             return gateways;
@@ -149,15 +198,27 @@ namespace clxapi
         /// </summary>
         /// <example>Code example:
         /// <code> 
-        /// var clxApi = new ClxApi(new string[] { "Username", "Password" }); 
-        /// var priceEntries = clxApi.GetPriceEntriesByGatewayId(2182);
+        /// try
+        /// {
+        ///     var clxApi = new ClxApi(new string[] { "Username", "Password" });
+        ///     var priceEntries = clxApi.GetPriceEntriesByGatewayId(2183);
+        /// }
+        /// catch (ClxException e)
+        /// {
+        ///     string errrorMessage = e.Message;               
+        /// }
+        /// catch (ClxApiException e)
+        /// {
+        ///     string clxErrrorMessage = e.ClxErrorMessage;
+        ///     int clxErrorCode = e.ClxErrorCode;
+        /// }
         /// </code>
         /// </example>
         /// <param name="id">Id of selected gateway</param>
-        /// <returns>IEnumerable list of all price entries by selected gateway id.</returns>
+        /// <returns>List of all price entries by selected gateway id.</returns>
         public IEnumerable<PriceEntry> GetPriceEntriesByGatewayId(int id)
         {
-            var result = _httpClient.Get(ClxSettings.GatewayPath +id +ClxSettings.PricePath);
+            var result = _httpClient.Get(ClxSettings.GatewayPath + id + ClxSettings.PricePath);
             var priceEntries = result.ToObject<List<PriceEntry>>();
             return priceEntries;
         }
@@ -167,8 +228,20 @@ namespace clxapi
         /// </summary>
         /// <example>Code example:
         /// <code> 
-        /// var clxApi = new ClxApi(new string[] { "Username", "Password" }); 
-        /// var priceEntries = clxApi.GetPriceEntriesByGatewayId(2182, 14);
+        /// try
+        /// {
+        ///     var clxApi = new ClxApi(new string[] { "Username", "Password" });
+        ///     var priceEntry = clxApi.GetPriceEntriesByGatewayIdAndOperatorId(2182, 14);
+        /// }
+        /// catch (ClxException e)
+        /// {
+        ///     string errrorMessage = e.Message;               
+        /// }
+        /// catch (ClxApiException e)
+        /// {
+        ///     string clxErrrorMessage = e.ClxErrorMessage;
+        ///     int clxErrorCode = e.ClxErrorCode;
+        /// }
         /// </code>
         /// </example>
         /// <param name="gatewayId">Id of selected gateway</param>
@@ -176,7 +249,7 @@ namespace clxapi
         /// <returns>PriceEntry by selected gateway id and operator id.</returns>
         public PriceEntry GetPriceEntriesByGatewayIdAndOperatorId(int gatewayId, int operatorId)
         {
-            var result = _httpClient.Get(ClxSettings.GatewayPath +gatewayId +ClxSettings.PricePath +operatorId);
+            var result = _httpClient.Get(ClxSettings.GatewayPath + gatewayId + ClxSettings.PricePath + operatorId);
             var priceEntries = result.ToObject<PriceEntry>();
             return priceEntries;
         }
@@ -185,9 +258,21 @@ namespace clxapi
         /// Returns all price entries from selected gateway and selected operator by selected date.
         /// </summary>
         /// <example>Code example:
-        /// <code> 
-        /// var clxApi = new ClxApi(new string[] { "Username", "Password" }); 
-        /// var priceEntries = clxApi.GetPriceEntriesByGatewayId(2182, 14, new DateTime(2014, 05, 12));
+        /// <code>
+        /// try
+        /// {
+        ///     var clxApi = new ClxApi(new string[] { "Username", "Password" }); 
+        ///     var priceEntry = clxApi.GetPriceEntriesByGatewayIdAndOperatorIdAndDate(2182, 14, new DateTime(2014, 05, 12));
+        /// }
+        /// catch (ClxException e)
+        /// {
+        ///     string errrorMessage = e.Message;               
+        /// }
+        /// catch (ClxApiException e)
+        /// {
+        ///     string clxErrrorMessage = e.ClxErrorMessage;
+        ///     int clxErrorCode = e.ClxErrorCode;
+        /// }      
         /// </code>
         /// </example>
         /// <param name="gatewayId">Id of selected gateway</param>
