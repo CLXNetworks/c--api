@@ -19,14 +19,7 @@ namespace clxapi
         /// Property Containing Clx API internal Error message.
         /// </summary>
         public string ClxErrorMessage { get; set; }
-        /// <summary>
-        /// Constructor set message.
-        /// </summary>
-        /// <param name="clxErrorMessage">Errormessage</param>
-        public ClxApiException(string clxErrorMessage)
-        {
-            ClxErrorMessage = clxErrorMessage;
-        }
+
         /// <summary>
         /// Constructor set message and code.
         /// </summary>

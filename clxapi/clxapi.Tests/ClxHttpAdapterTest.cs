@@ -53,20 +53,8 @@ namespace clxapi.Tests
             HttpAdapter httpAdapter = new HttpAdapter();
             httpAdapter.Auth = new string[] { "Username", "Password" };
 
-            ClxResponse httpResponse = httpAdapter.Get("http://httpbin.org/status/450");
-            Assert.AreEqual(500, httpResponse.StatusCode);
-
             ClxResponse httpsResponse = httpAdapter.Get("https://httpbin.org/status/500");
             Assert.AreEqual(500, httpsResponse.StatusCode);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof( ClxException))]
-        public void HttpAdaptercatchExceptions()
-        {
-            HttpAdapter httpAdapter = new HttpAdapter();
-
-            ClxResponse httpResponse = httpAdapter.Get("http://HackedRequestWithoutSetAuth");
         }
 
         [TestMethod]

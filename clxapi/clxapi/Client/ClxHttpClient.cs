@@ -88,6 +88,12 @@ namespace clxapi.Client
         private dynamic parseReponse(ClxResponse response)
         {
             dynamic parsedBody;
+
+            if (string.IsNullOrEmpty(response.Body))
+            {
+                    throw new ClxException(response.ErrorMessage);
+            }
+         
             try
             {
                 parsedBody = JValue.Parse(response.Body);
@@ -96,14 +102,15 @@ namespace clxapi.Client
             {
                 throw new ClxException("Error when parsing Json");
             }
-            // TODO: Implement exception handling with custom exceptions.
+
             if (response.StatusCode > 399)
             {
                 string message = parsedBody.error.message;
                 int code = parsedBody.error.code;
-                // TODO: add errorcode from wrapper.
                 throw new ClxApiException(message, code);
             }
+
+            
             return parsedBody;          
         }
     }

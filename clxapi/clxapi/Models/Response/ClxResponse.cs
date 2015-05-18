@@ -24,5 +24,10 @@ namespace clxapi
         /// Property: Contains body values.
         /// </summary>
         public string Body { get; set; }
+
+        /// <summary>
+        /// Property: Contains errormessage if Response body does not exist from ClxApi.
+        /// </summary>
+        public string ErrorMessage { get; set; }
     }
 }

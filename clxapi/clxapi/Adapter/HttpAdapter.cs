@@ -70,6 +70,7 @@ namespace clxapi.Adapter
         private ClxResponse Execute(string method, string url, string body = null)
         {
             ClxResponse res = new ClxResponse();
+
             try
             {
                 WebRequest webRequest = WebRequest.Create(url);
@@ -90,8 +91,8 @@ namespace clxapi.Adapter
                 }
                 String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(Auth[0] + ":" + Auth[1]));
                 webRequest.Headers.Add("Authorization", "Basic " + encoded);
-   
-                using (WebResponse response = webRequest.GetResponse())
+
+                using(WebResponse response = webRequest.GetResponse())
                 using (Stream content = response.GetResponseStream())
                 using (StreamReader reader = new StreamReader(content))
                 {
@@ -105,30 +106,24 @@ namespace clxapi.Adapter
             catch (WebException e)
             {
                 HttpWebResponse errorResponse = e.Response as HttpWebResponse;
-                if (errorResponse.StatusCode == HttpStatusCode.Unauthorized)
+                using (errorResponse)
                 {
-                    res.StatusCode = 401;
-                    return res;
-                }
-                else if (errorResponse.StatusCode == HttpStatusCode.BadRequest)
-                {
-                    res.StatusCode = 400;
-                    return res;
-                }
-                else if (errorResponse.StatusCode == HttpStatusCode.NotFound)
-                {
-                    res.StatusCode = 404;
-                    return res;
-                }
-                else
-                {
-                    res.StatusCode = 500; 
-                    return res;
-                }
+                    using (var reader = new StreamReader(errorResponse.GetResponseStream()))
+                    {
+                        res.Body = reader.ReadToEnd();
+                        if (string.IsNullOrEmpty(res.Body))
+                        {
+                            res.ErrorMessage = e.Message;
+                        }
+                    }
+                    res.StatusCode = (int)errorResponse.StatusCode;
+                    return res;            
+                }                          
             }
             catch (Exception e)
             {
-                throw new ClxException(e.Message);
+                res.ErrorMessage = e.Message;
+                return res;
             }  
         }
     }

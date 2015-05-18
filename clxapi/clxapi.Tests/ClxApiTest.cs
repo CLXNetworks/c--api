@@ -142,32 +142,11 @@ namespace clxapi.Tests
         }
 
         [TestMethod]
-        public void AssertClxApiCanGetOperatorsTestAPI()
-        {
-            var clxApi = new ClxApi(new string[] { "Username", "Password" });
-            clxApi.SetBaseUrl("http://localhost:1129/api");
-            var data = clxApi.GetOperators();
-
-            Assert.IsInstanceOfType(data, typeof(IEnumerable<Operator>));
-            Assert.IsNotNull(data);
-            Assert.AreEqual(data.ToList()[0].id, 1);
-            Assert.AreEqual(data.ToList()[0].name, "Testoperatpor");
-            Assert.AreEqual(data.ToList()[0].isoCountryCode, "5");
-            Assert.AreEqual(data.ToList()[1].network, "Secretary");
-            Assert.AreEqual(data.ToList()[1].operationalStatDate, "-0001-11-30 00:00:00");
-            Assert.AreEqual(data.ToList()[1].operationalState, "inactive");
-            Assert.AreEqual(data.ToList()[1].uniqueName, "Bella");
-            Assert.AreEqual(data.ToList()[1].numberOfSubscribers, 8888);
-
-        }
-
-        [TestMethod]
         public void AssertClxApiCanGetOperatorsByIdTestAPI()
         {
-
-            var clxApi = new ClxApi(new string[] { "Username", "Password" });
-            clxApi.SetBaseUrl("http://localhost:1129/api");
-            var data = clxApi.GetOperatorById(1);
+            //TODO remove this after developement done.
+            var clxApi = new ClxApi(new string[] { "username", "password" });
+            var data = clxApi.GetOperatorById(888888);
 
             Assert.IsInstanceOfType(data, typeof(Operator));
             Assert.IsNotNull(data);
