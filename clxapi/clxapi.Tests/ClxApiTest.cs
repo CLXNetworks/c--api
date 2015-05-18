@@ -140,23 +140,5 @@ namespace clxapi.Tests
 
             Assert.AreEqual(clxApi.Client.BaseURL + ClxSettings.GatewayPath + id, testAdapter.FullUrl);
         }
-        [TestMethod]
-        public void Test()
-        {
-            try
-            {
-                var clxApi = new ClxApi(new string[] { "Username", "Password" });
-                Gateway gateway = clxApi.GetGatewayById(2182);
-            }
-            catch (ClxException e)
-            {
-                string errrorMessage = e.Message;
-            }
-            catch (ClxApiException e)
-            {
-                string clxErrrorMessage = e.ClxErrorMessage;
-                int clxErrorCode = e.ClxErrorCode;
-            }
-        }
     }
 }
