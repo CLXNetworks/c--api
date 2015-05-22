@@ -1,0 +1,929 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML/EN">
+<HTML>
+  <BODY>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Auth property">
+        <param name="See Also" value="Auth property">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="HttpAdapter.Auth Property ">
+          <param name="Local" value="html/54e77d7f-e17b-50d5-6731-4a204d0acce8.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="IHttpAdapter.Auth Property ">
+          <param name="Local" value="html/aacb255d-38f9-5acb-5a93-b50f1bd4465a.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="BaseURI property">
+        <param name="Local" value="html/8b2a47b7-e2b2-93f0-39a4-1f150281eb93.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="BaseURL property">
+        <param name="See Also" value="BaseURL property">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ClxHttpClient.BaseURL Property ">
+          <param name="Local" value="html/2e4a7812-60da-20df-6c85-6c55d292273f.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="IHttpClient.BaseURL Property ">
+          <param name="Local" value="html/b07a8736-9b30-0754-6851-39c72afd3106.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Body property">
+        <param name="Local" value="html/7172edd3-7cab-ea8a-8ac2-53dbbc054201.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Client property">
+        <param name="Local" value="html/623c8ad9-5a84-d444-9dfc-cd26c9a2848e.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxApi class">
+        <param name="See Also" value="ClxApi class">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ClxApi Class">
+          <param name="Local" value="html/c7807fe0-5ec8-5594-3f2a-b5c21c50fdfa.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="about ClxApi class">
+          <param name="Local" value="html/c7807fe0-5ec8-5594-3f2a-b5c21c50fdfa.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="constructor">
+          <param name="Local" value="html/22e8d0ad-732f-d5da-3a22-87220f3a9db4.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="methods">
+          <param name="Local" value="html/742f532c-d9a2-16df-622c-8bb89343eec7.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="properties">
+          <param name="Local" value="html/7a738609-fe36-f9dc-2eea-6091837dcda0.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="clxapi namespace">
+        <param name="Local" value="html/8ba6d667-0c0f-39b4-0975-de76c86eda5c.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="clxapi.Adapter namespace">
+        <param name="Local" value="html/20ff3874-e6b2-e5e7-70dd-8353f1a2eece.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="clxapi.Adapter.HttpAdapter class">
+        <param name="Local" value="html/86f02420-ea18-9ce5-3ccb-2c43a57b401c.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="clxapi.Adapter.IHttpAdapter interface">
+        <param name="Local" value="html/46f732be-e013-db73-43cd-b19179eeae6a.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="clxapi.Client namespace">
+        <param name="Local" value="html/316d593f-ab13-0a6f-e963-eee0fadb0f13.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxApi.Client property">
+        <param name="Local" value="html/623c8ad9-5a84-d444-9dfc-cd26c9a2848e.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="clxapi.Client.ClxHttpClient class">
+        <param name="Local" value="html/e6ce668b-2593-e73b-922e-171e95eba767.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="clxapi.Client.IHttpClient interface">
+        <param name="Local" value="html/ed810655-7459-0351-85be-7ed879ebea0c.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="clxapi.ClxApi class">
+        <param name="Local" value="html/c7807fe0-5ec8-5594-3f2a-b5c21c50fdfa.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxApi.ClxApi constructor">
+        <param name="Local" value="html/22e8d0ad-732f-d5da-3a22-87220f3a9db4.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="clxapi.ClxApiException class">
+        <param name="Local" value="html/4d186440-5c8a-04b5-7efe-87c7b3f51e6c.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="clxapi.ClxException class">
+        <param name="Local" value="html/eeb0e386-1465-55e3-b6fc-3e4716a95ddb.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="clxapi.ClxResponse class">
+        <param name="Local" value="html/b68311c5-06c6-e1d0-90db-ec87d1e5c461.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="clxapi.ClxSettings class">
+        <param name="Local" value="html/23b7e887-6247-8776-31e3-c422b1c713b5.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="clxapi.Gateway class">
+        <param name="Local" value="html/4f7c30c3-ae9e-9146-bcdf-10819bfd86df.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxApi.GetGatewayById method">
+        <param name="Local" value="html/b04df80c-27e0-25ed-eae3-3b80dae27987.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxApi.GetGateways method">
+        <param name="Local" value="html/4bed7048-e5e9-35ae-fc77-393c364f0e36.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxApi.GetOperatorById method">
+        <param name="Local" value="html/17399e39-7587-cd6f-e5ff-7251b8aaf6c2.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxApi.GetOperators method">
+        <param name="Local" value="html/700c6a6b-b544-2c74-9932-7f25b99e9dc3.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxApi.GetPriceEntriesByGatewayId method">
+        <param name="Local" value="html/2149eafc-1249-bc1d-8da2-daba8d646077.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxApi.GetPriceEntriesByGatewayIdAndOperatorId method">
+        <param name="Local" value="html/0969a11e-b9dc-df9f-46fc-1f01e8b0eb7e.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxApi.GetPriceEntriesByGatewayIdAndOperatorIdAndDate method">
+        <param name="Local" value="html/cf571eee-e656-4a43-55a6-81996c0e4714.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="clxapi.Operator class">
+        <param name="Local" value="html/47b28eeb-7d36-be31-99b5-489511b8a028.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="clxapi.PriceEntry class">
+        <param name="Local" value="html/353b0499-8168-5f2c-d69f-a75410da890b.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxApi.SetBaseUrl method">
+        <param name="Local" value="html/a6fe3542-c54e-d68f-f7be-44014050e037.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxApiException class">
+        <param name="See Also" value="ClxApiException class">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ClxApiException Class">
+          <param name="Local" value="html/4d186440-5c8a-04b5-7efe-87c7b3f51e6c.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="about ClxApiException class">
+          <param name="Local" value="html/4d186440-5c8a-04b5-7efe-87c7b3f51e6c.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="constructor">
+          <param name="Local" value="html/6f1e2ad8-6175-b307-c9a8-77ff354b0eec.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="properties">
+          <param name="Local" value="html/634dabb0-bc53-500e-5610-2575d84fc8b9.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxApiException.ClxApiException constructor">
+        <param name="Local" value="html/6f1e2ad8-6175-b307-c9a8-77ff354b0eec.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxApiException.ClxErrorCode property">
+        <param name="Local" value="html/28153eb4-296d-5dac-cc2a-4dc1e904f3eb.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxApiException.ClxErrorMessage property">
+        <param name="Local" value="html/89e279f4-4038-16a5-148b-3ea770c9edc2.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxApiException.StatusCode property">
+        <param name="Local" value="html/e7f556e2-4422-f3ae-1bd7-cc8eddb9930a.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxErrorCode property">
+        <param name="Local" value="html/28153eb4-296d-5dac-cc2a-4dc1e904f3eb.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxErrorMessage property">
+        <param name="Local" value="html/89e279f4-4038-16a5-148b-3ea770c9edc2.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxException class">
+        <param name="See Also" value="ClxException class">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ClxException Class">
+          <param name="Local" value="html/eeb0e386-1465-55e3-b6fc-3e4716a95ddb.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="about ClxException class">
+          <param name="Local" value="html/eeb0e386-1465-55e3-b6fc-3e4716a95ddb.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="constructor">
+          <param name="Local" value="html/505ca524-e11b-c25c-b35d-5544a1080445.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxException.ClxException constructor">
+        <param name="Local" value="html/505ca524-e11b-c25c-b35d-5544a1080445.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxHttpClient class">
+        <param name="See Also" value="ClxHttpClient class">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ClxHttpClient Class">
+          <param name="Local" value="html/e6ce668b-2593-e73b-922e-171e95eba767.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="about ClxHttpClient class">
+          <param name="Local" value="html/e6ce668b-2593-e73b-922e-171e95eba767.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="constructor">
+          <param name="Local" value="html/4e0d0fdd-ccbc-a4dc-b06c-1cffb6a01afa.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="methods">
+          <param name="Local" value="html/d571aa25-d2c9-12aa-527a-38b42f38e4b0.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="properties">
+          <param name="Local" value="html/7b8331c7-8907-3131-43e0-7c81dfd8b977.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxHttpClient.BaseURL property">
+        <param name="Local" value="html/2e4a7812-60da-20df-6c85-6c55d292273f.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxHttpClient.ClxHttpClient constructor">
+        <param name="Local" value="html/4e0d0fdd-ccbc-a4dc-b06c-1cffb6a01afa.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxHttpClient.Get method">
+        <param name="Local" value="html/20588982-b108-b7a0-8cca-0c8478bd27a7.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxHttpClient.HttpAdapter property">
+        <param name="Local" value="html/b0c04bb8-ef7f-bfbc-3ab6-748a160198f2.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxHttpClient.Post method">
+        <param name="Local" value="html/44e62c45-ceff-ecfd-4ea8-d6bc064e2fd8.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxHttpClient.Put method">
+        <param name="Local" value="html/ff84850c-95f4-ab1e-3da5-cb71be22cd74.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxResponse class">
+        <param name="See Also" value="ClxResponse class">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ClxResponse Class">
+          <param name="Local" value="html/b68311c5-06c6-e1d0-90db-ec87d1e5c461.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="about ClxResponse class">
+          <param name="Local" value="html/b68311c5-06c6-e1d0-90db-ec87d1e5c461.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="constructor">
+          <param name="Local" value="html/ecb40146-047f-8ef7-86e5-1c13ebc3e2c9.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="properties">
+          <param name="Local" value="html/693e8dca-3736-ced8-3c1c-0c21dfd13c45.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxResponse.Body property">
+        <param name="Local" value="html/7172edd3-7cab-ea8a-8ac2-53dbbc054201.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxResponse.ClxResponse constructor">
+        <param name="Local" value="html/ecb40146-047f-8ef7-86e5-1c13ebc3e2c9.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxResponse.ErrorMessage property">
+        <param name="Local" value="html/2b308ff2-9bb3-1eb2-c610-cf1805def938.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxResponse.Header property">
+        <param name="Local" value="html/0a938af8-e54c-056d-6dc1-83d25910ccda.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxResponse.StatusCode property">
+        <param name="Local" value="html/3d75b495-f51a-384a-3e73-7fb4c2588a2c.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxSettings class">
+        <param name="See Also" value="ClxSettings class">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ClxSettings Class">
+          <param name="Local" value="html/23b7e887-6247-8776-31e3-c422b1c713b5.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="about ClxSettings class">
+          <param name="Local" value="html/23b7e887-6247-8776-31e3-c422b1c713b5.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="constructor">
+          <param name="Local" value="html/156a9a20-00f9-c9ce-d00b-8c587c24b541.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="fields">
+          <param name="Local" value="html/75fe8103-410e-cb12-a92b-eee9e267d5fd.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="properties">
+          <param name="Local" value="html/8708d546-c5e6-fe87-1c89-8b0ffeff394e.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxSettings.BaseURI property">
+        <param name="Local" value="html/8b2a47b7-e2b2-93f0-39a4-1f150281eb93.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxSettings.ClxSettings constructor">
+        <param name="Local" value="html/156a9a20-00f9-c9ce-d00b-8c587c24b541.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxSettings.DateParam field">
+        <param name="Local" value="html/3672f57e-f26e-764f-872f-d82cc2cfb867.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxSettings.GatewayPath field">
+        <param name="Local" value="html/15f70e7b-b0b3-05ac-2f8e-6de74971a190.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxSettings.OperatorPath field">
+        <param name="Local" value="html/abb1bca8-40ce-a7fd-3229-eea37b2055a2.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClxSettings.PricePath field">
+        <param name="Local" value="html/4229b531-ff05-b9c9-d563-d9f9600b178f.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="DateParam field">
+        <param name="Local" value="html/3672f57e-f26e-764f-872f-d82cc2cfb867.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ErrorMessage property">
+        <param name="Local" value="html/2b308ff2-9bb3-1eb2-c610-cf1805def938.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="expireDate property">
+        <param name="Local" value="html/bd4d2698-ab9a-38f7-eaa4-9d66b4c0b453.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Gateway class">
+        <param name="See Also" value="Gateway class">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="Gateway Class">
+          <param name="Local" value="html/4f7c30c3-ae9e-9146-bcdf-10819bfd86df.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="about Gateway class">
+          <param name="Local" value="html/4f7c30c3-ae9e-9146-bcdf-10819bfd86df.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="constructor">
+          <param name="Local" value="html/62a11aa1-501d-0c90-78b6-7913b8d188a4.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="methods">
+          <param name="Local" value="html/fde94d02-9cde-e0cf-04c9-dfa8cf65fc64.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="properties">
+          <param name="Local" value="html/46c99797-bf03-ffdc-7c69-e0123a7260dd.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="gateway property">
+        <param name="Local" value="html/e471ba3b-358d-d82c-0f64-d1b648f3528c.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Gateway.Gateway constructor">
+        <param name="Local" value="html/62a11aa1-501d-0c90-78b6-7913b8d188a4.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Gateway.id property">
+        <param name="Local" value="html/044508e3-98f3-ca1c-50d2-35cb48baa7bc.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Gateway.name property">
+        <param name="Local" value="html/f6e4637f-8f3c-f46a-c0e4-f95a85720333.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Gateway.Stringyfy method">
+        <param name="Local" value="html/d4aa5822-7c17-c246-8a54-c42f39ed278c.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Gateway.type property">
+        <param name="Local" value="html/c46d8702-039d-7ea4-78bf-c97cd884cbae.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="GatewayPath field">
+        <param name="Local" value="html/15f70e7b-b0b3-05ac-2f8e-6de74971a190.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Get method">
+        <param name="See Also" value="Get method">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ClxHttpClient.Get Method ">
+          <param name="Local" value="html/20588982-b108-b7a0-8cca-0c8478bd27a7.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="HttpAdapter.Get Method ">
+          <param name="Local" value="html/c1e4f785-1321-19ed-5e2b-4b3ce893d45e.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="IHttpAdapter.Get Method ">
+          <param name="Local" value="html/857e11c5-7de6-3c6e-8e8a-5b1e2dc83122.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="IHttpClient.Get Method ">
+          <param name="Local" value="html/957e5a4d-b952-3f47-5067-9cd942dab59e.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="GetGatewayById method">
+        <param name="Local" value="html/b04df80c-27e0-25ed-eae3-3b80dae27987.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="GetGateways method">
+        <param name="Local" value="html/4bed7048-e5e9-35ae-fc77-393c364f0e36.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="GetOperatorById method">
+        <param name="Local" value="html/17399e39-7587-cd6f-e5ff-7251b8aaf6c2.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="GetOperators method">
+        <param name="Local" value="html/700c6a6b-b544-2c74-9932-7f25b99e9dc3.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="GetPriceEntriesByGatewayId method">
+        <param name="Local" value="html/2149eafc-1249-bc1d-8da2-daba8d646077.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="GetPriceEntriesByGatewayIdAndOperatorId method">
+        <param name="Local" value="html/0969a11e-b9dc-df9f-46fc-1f01e8b0eb7e.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="GetPriceEntriesByGatewayIdAndOperatorIdAndDate method">
+        <param name="Local" value="html/cf571eee-e656-4a43-55a6-81996c0e4714.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Header property">
+        <param name="Local" value="html/0a938af8-e54c-056d-6dc1-83d25910ccda.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="HttpAdapter class">
+        <param name="See Also" value="HttpAdapter class">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="HttpAdapter Class">
+          <param name="Local" value="html/86f02420-ea18-9ce5-3ccb-2c43a57b401c.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="about HttpAdapter class">
+          <param name="Local" value="html/86f02420-ea18-9ce5-3ccb-2c43a57b401c.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="constructor">
+          <param name="Local" value="html/ef9c8718-c095-0eb4-8e60-fad555f1cf87.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="methods">
+          <param name="Local" value="html/0464555e-0c65-42fd-e9ea-6972e9cd07e6.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="properties">
+          <param name="Local" value="html/d4fdb87a-a1d2-6826-b978-cff2fb976c05.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="HttpAdapter property">
+        <param name="See Also" value="HttpAdapter property">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ClxHttpClient.HttpAdapter Property ">
+          <param name="Local" value="html/b0c04bb8-ef7f-bfbc-3ab6-748a160198f2.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="IHttpClient.HttpAdapter Property ">
+          <param name="Local" value="html/4dbd669d-564b-e8a0-c10b-0a40dd4defd5.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="HttpAdapter.Auth property">
+        <param name="Local" value="html/54e77d7f-e17b-50d5-6731-4a204d0acce8.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="HttpAdapter.Get method">
+        <param name="Local" value="html/c1e4f785-1321-19ed-5e2b-4b3ce893d45e.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="HttpAdapter.HttpAdapter constructor">
+        <param name="Local" value="html/ef9c8718-c095-0eb4-8e60-fad555f1cf87.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="HttpAdapter.Post method">
+        <param name="Local" value="html/b493c66e-b3c5-33d0-65ff-906ed5ffc7b5.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="HttpAdapter.Put method">
+        <param name="Local" value="html/c0add500-9849-c250-e818-fd0e74c302a7.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="id property">
+        <param name="See Also" value="id property">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="Gateway.id Property ">
+          <param name="Local" value="html/044508e3-98f3-ca1c-50d2-35cb48baa7bc.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="Operator.id Property ">
+          <param name="Local" value="html/faf1a00f-7027-134c-fe69-1faac255b548.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IHttpAdapter interface">
+        <param name="See Also" value="IHttpAdapter interface">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="IHttpAdapter Interface">
+          <param name="Local" value="html/46f732be-e013-db73-43cd-b19179eeae6a.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="about IHttpAdapter interface">
+          <param name="Local" value="html/46f732be-e013-db73-43cd-b19179eeae6a.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="methods">
+          <param name="Local" value="html/a2091313-ff78-9c7c-55ea-ad7e42bf7b12.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="properties">
+          <param name="Local" value="html/ba890296-5171-da3b-292e-f32dd1bdfcff.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IHttpAdapter.Auth property">
+        <param name="Local" value="html/aacb255d-38f9-5acb-5a93-b50f1bd4465a.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IHttpAdapter.Get method">
+        <param name="Local" value="html/857e11c5-7de6-3c6e-8e8a-5b1e2dc83122.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IHttpAdapter.Post method">
+        <param name="Local" value="html/3f93167a-160a-d1f8-d9a0-d3a39fd9c875.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IHttpAdapter.Put method">
+        <param name="Local" value="html/493ccdaa-f17d-17cd-8760-a10f858a6f05.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IHttpClient interface">
+        <param name="See Also" value="IHttpClient interface">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="IHttpClient Interface">
+          <param name="Local" value="html/ed810655-7459-0351-85be-7ed879ebea0c.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="about IHttpClient interface">
+          <param name="Local" value="html/ed810655-7459-0351-85be-7ed879ebea0c.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="methods">
+          <param name="Local" value="html/87e6087b-b029-3fff-81ac-2cecc4790ade.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="properties">
+          <param name="Local" value="html/d655b921-ab23-7f7a-9249-baff8285a27a.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IHttpClient.BaseURL property">
+        <param name="Local" value="html/b07a8736-9b30-0754-6851-39c72afd3106.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IHttpClient.Get method">
+        <param name="Local" value="html/957e5a4d-b952-3f47-5067-9cd942dab59e.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IHttpClient.HttpAdapter property">
+        <param name="Local" value="html/4dbd669d-564b-e8a0-c10b-0a40dd4defd5.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IHttpClient.Post method">
+        <param name="Local" value="html/1f5bd707-3022-a8e5-0b90-e618e2392978.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IHttpClient.Put method">
+        <param name="Local" value="html/22af24f4-6863-b83a-177b-151d7d64bf40.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="isoCountryCode property">
+        <param name="Local" value="html/93a92cd7-575b-3db8-68eb-3746989d5400.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="name property">
+        <param name="See Also" value="name property">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="Gateway.name Property ">
+          <param name="Local" value="html/f6e4637f-8f3c-f46a-c0e4-f95a85720333.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="Operator.name Property ">
+          <param name="Local" value="html/582b5cfa-9bb5-f01b-ba82-da4b4ad81bc5.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="network property">
+        <param name="Local" value="html/006c4a36-d33d-c622-ba76-513157bc4fea.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="numberOfSubscribers property">
+        <param name="Local" value="html/4fbf264b-e6df-324c-4d6e-1465a1371397.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="operationalStatDate property">
+        <param name="Local" value="html/8b4d9b79-5aae-ffb5-c6cb-9fbfad8ddf99.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="operationalState property">
+        <param name="Local" value="html/ca9d773e-d584-16f4-c119-1fe8e1e20d2e.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Operator class">
+        <param name="See Also" value="Operator class">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="Operator Class">
+          <param name="Local" value="html/47b28eeb-7d36-be31-99b5-489511b8a028.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="about Operator class">
+          <param name="Local" value="html/47b28eeb-7d36-be31-99b5-489511b8a028.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="constructor">
+          <param name="Local" value="html/90269fa4-bdbb-9d4f-6428-7ed854b6c9bc.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="methods">
+          <param name="Local" value="html/3b5549e1-de90-69b5-33f0-8925fca2b312.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="properties">
+          <param name="Local" value="html/36deed5f-7adc-20c3-aae7-7f33a57bf3d0.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="operator property">
+        <param name="Local" value="html/a6c13242-657f-4532-5024-144251499ee1.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Operator.id property">
+        <param name="Local" value="html/faf1a00f-7027-134c-fe69-1faac255b548.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Operator.isoCountryCode property">
+        <param name="Local" value="html/93a92cd7-575b-3db8-68eb-3746989d5400.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Operator.name property">
+        <param name="Local" value="html/582b5cfa-9bb5-f01b-ba82-da4b4ad81bc5.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Operator.network property">
+        <param name="Local" value="html/006c4a36-d33d-c622-ba76-513157bc4fea.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Operator.numberOfSubscribers property">
+        <param name="Local" value="html/4fbf264b-e6df-324c-4d6e-1465a1371397.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Operator.operationalStatDate property">
+        <param name="Local" value="html/8b4d9b79-5aae-ffb5-c6cb-9fbfad8ddf99.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Operator.operationalState property">
+        <param name="Local" value="html/ca9d773e-d584-16f4-c119-1fe8e1e20d2e.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Operator.Operator constructor">
+        <param name="Local" value="html/90269fa4-bdbb-9d4f-6428-7ed854b6c9bc.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Operator.Stringyfy method">
+        <param name="Local" value="html/940b0eaa-533c-051e-0e98-dcd3ab426dd4.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Operator.uniqueName property">
+        <param name="Local" value="html/9d394cf3-671a-9717-625e-f6a6b1ef6cc1.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="OperatorPath field">
+        <param name="Local" value="html/abb1bca8-40ce-a7fd-3229-eea37b2055a2.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Post method">
+        <param name="See Also" value="Post method">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ClxHttpClient.Post Method ">
+          <param name="Local" value="html/44e62c45-ceff-ecfd-4ea8-d6bc064e2fd8.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="HttpAdapter.Post Method ">
+          <param name="Local" value="html/b493c66e-b3c5-33d0-65ff-906ed5ffc7b5.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="IHttpAdapter.Post Method ">
+          <param name="Local" value="html/3f93167a-160a-d1f8-d9a0-d3a39fd9c875.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="IHttpClient.Post Method ">
+          <param name="Local" value="html/1f5bd707-3022-a8e5-0b90-e618e2392978.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="price property">
+        <param name="Local" value="html/00049c2c-6f5e-c70e-6584-7d6bb86c3bdd.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="PriceEntry class">
+        <param name="See Also" value="PriceEntry class">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="PriceEntry Class">
+          <param name="Local" value="html/353b0499-8168-5f2c-d69f-a75410da890b.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="about PriceEntry class">
+          <param name="Local" value="html/353b0499-8168-5f2c-d69f-a75410da890b.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="constructor">
+          <param name="Local" value="html/5262aa3f-e324-bac6-d33a-ebdfcd942829.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="methods">
+          <param name="Local" value="html/e911c6de-7c4d-cbc3-35aa-4d9fd0aeb664.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="properties">
+          <param name="Local" value="html/38015cc2-9ea6-4559-7911-d7be19b06c69.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="PriceEntry.expireDate property">
+        <param name="Local" value="html/bd4d2698-ab9a-38f7-eaa4-9d66b4c0b453.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="PriceEntry.gateway property">
+        <param name="Local" value="html/e471ba3b-358d-d82c-0f64-d1b648f3528c.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="PriceEntry.operator property">
+        <param name="Local" value="html/a6c13242-657f-4532-5024-144251499ee1.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="PriceEntry.price property">
+        <param name="Local" value="html/00049c2c-6f5e-c70e-6584-7d6bb86c3bdd.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="PriceEntry.PriceEntry constructor">
+        <param name="Local" value="html/5262aa3f-e324-bac6-d33a-ebdfcd942829.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="PriceEntry.Stringyfy method">
+        <param name="Local" value="html/cf43bdd5-aa3a-557f-b265-aa0f44ad707b.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="PricePath field">
+        <param name="Local" value="html/4229b531-ff05-b9c9-d563-d9f9600b178f.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Put method">
+        <param name="See Also" value="Put method">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ClxHttpClient.Put Method ">
+          <param name="Local" value="html/ff84850c-95f4-ab1e-3da5-cb71be22cd74.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="HttpAdapter.Put Method ">
+          <param name="Local" value="html/c0add500-9849-c250-e818-fd0e74c302a7.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="IHttpAdapter.Put Method ">
+          <param name="Local" value="html/493ccdaa-f17d-17cd-8760-a10f858a6f05.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="IHttpClient.Put Method ">
+          <param name="Local" value="html/22af24f4-6863-b83a-177b-151d7d64bf40.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="SetBaseUrl method">
+        <param name="Local" value="html/a6fe3542-c54e-d68f-f7be-44014050e037.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="StatusCode property">
+        <param name="See Also" value="StatusCode property">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ClxApiException.StatusCode Property ">
+          <param name="Local" value="html/e7f556e2-4422-f3ae-1bd7-cc8eddb9930a.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="ClxResponse.StatusCode Property ">
+          <param name="Local" value="html/3d75b495-f51a-384a-3e73-7fb4c2588a2c.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Stringyfy method">
+        <param name="See Also" value="Stringyfy method">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="Gateway.Stringyfy Method ">
+          <param name="Local" value="html/d4aa5822-7c17-c246-8a54-c42f39ed278c.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="Operator.Stringyfy Method ">
+          <param name="Local" value="html/940b0eaa-533c-051e-0e98-dcd3ab426dd4.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="PriceEntry.Stringyfy Method ">
+          <param name="Local" value="html/cf43bdd5-aa3a-557f-b265-aa0f44ad707b.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="type property">
+        <param name="Local" value="html/c46d8702-039d-7ea4-78bf-c97cd884cbae.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="uniqueName property">
+        <param name="Local" value="html/9d394cf3-671a-9717-625e-f6a6b1ef6cc1.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="version">
+        <param name="See Also" value="version">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="1.0.0.0">
+          <param name="Local" value="html/c237ceee-97c6-4f3b-a327-560ab5697f26.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="history">
+          <param name="Local" value="html/a71e6bbf-20e3-4a1e-ae0a-02ab91ed7573.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Welcome">
+        <param name="Local" value="html/dfb6dc24-1242-40b7-9862-0c5da02bb6d0.htm">
+      </OBJECT></LI>
+    </UL>
+  </BODY>
+</HTML>
