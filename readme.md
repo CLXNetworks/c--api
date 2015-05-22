@@ -10,7 +10,7 @@
       In Visual studio you find Package Manager Console under:   
         Tools -> NuGet Package Manager -> Package Manager Console   
 On Package Manager Console line write : **Install-Package Newtonsoft.Json -Version 6.0.8**    
-4. Installation Done, see [Examples Insert Link here](Insert Link here) how to use wrapper.          
+4. Installation Done open Documentation for examples in how to use CLXAPI.     
         
 
 ##Requirements
