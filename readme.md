@@ -6,16 +6,18 @@
 
 1. Clone or Fork repository.   
 2. Run sollution clxapi in Visual studio.   
-3. Install Json.NET [See link for information about NuGet.](https://www.nuget.org/packages/newtonsoft.json/).    
-      In Visual studio you find Package Manager Console under:   
-        Tools -> NuGet Package Manager -> Package Manager Console   
-On Package Manager Console line write : **Install-Package Newtonsoft.Json -Version 6.0.8**    
-4. Installation Done open Documentation for examples in how to use CLXAPI.     
+3. Installation done, open Documentation for examples in how to use CLXAPI.     
         
-
 ##Requirements
 Developed in .NET Framework 4.5.1 Not tested in earlier versions.
 Json.Net 6.0.8 [Json.Net](https://www.nuget.org/packages/newtonsoft.json/) 
+
+##Dependencies
+###### Json.NET [See link for information about NuGet.](https://www.nuget.org/packages/newtonsoft.json/).  
+Visual studio will install Json.NET dependency automaticly when starting sollution. Howevver if troubles.
+ In Visual studio you find Package Manager Console under:   
+        Tools -> NuGet Package Manager -> Package Manager Console   
+On Package Manager Console line write : **Install-Package Newtonsoft.Json -Version 6.0.8**   
 
 ## Documentation
 Application is documented by Sandbox and is found in Documentation/Help   
