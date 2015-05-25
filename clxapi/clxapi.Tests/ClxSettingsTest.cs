@@ -9,7 +9,7 @@ namespace clxapi.Tests
         [TestMethod]
         public void AssertCorrectClxSettingsDateParam()
         {
-            Assert.AreEqual(ClxSettings.DateParam, "/date=");
+            Assert.AreEqual(ClxSettings.DateParam, "/?date=");
         }
 
         [TestMethod]

@@ -39,7 +39,7 @@ namespace clxapi
         /// <summary>
         /// Param for date toward Clx api..
         /// </summary>
-        public const string DateParam = "/date=";
+        public const string DateParam = "/?date=";
 
     }
 }

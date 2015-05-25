@@ -288,9 +288,9 @@ namespace clxapi
         /// <returns>PriceEntry by selected gateway id and operator id and operator id selected by Date.</returns>
         public PriceEntry GetPriceEntriesByGatewayIdAndOperatorIdAndDate(int gatewayId, int operatorId, DateTime date)
         {
-            var selectedDateParam = String.Format("{0},{1}", ClxSettings.DateParam, date);
-            var result = _httpClient.Get(ClxSettings.GatewayPath + gatewayId + ClxSettings.PricePath + operatorId);
-            var priceEntries = result.ToObject<PriceEntry>();
+            string dateParam = String.Format("{0}{1}-{2}-{3}",ClxSettings.DateParam, date.Year, date.Month, date.Day);
+            var result = _httpClient.Get(ClxSettings.GatewayPath + gatewayId + ClxSettings.PricePath + operatorId + dateParam);
+            PriceEntry priceEntries = result.ToObject<PriceEntry>();
             return priceEntries;
         }
     }

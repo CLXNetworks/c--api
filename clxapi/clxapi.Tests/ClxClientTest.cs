@@ -80,12 +80,14 @@ namespace clxapi.Tests
             ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }, testAdapter);
             clxApi.SetBaseUrl("https://TEST");
             var client = clxApi.Client;
+           
             try
             {
                 client.Post("/TESTSTRING/", "{Placeholder:NotImportant}");
             }
             catch (ClxApiException e)
             {
+                var url = testAdapter.FullUrl;
                 var errorMessage = e.ClxErrorMessage;
                 var errorCode = e.ClxErrorCode;
                 Assert.IsNotNull(errorMessage);
@@ -95,6 +97,7 @@ namespace clxapi.Tests
                 Assert.AreEqual(4000, errorCode);
                 Assert.IsInstanceOfType(errorCode, typeof(int));
                 Assert.AreEqual(400, e.StatusCode);
+                
             }
         }
     }

@@ -29,7 +29,7 @@ namespace clxapi
         /// </summary>
         /// <param name="clxErrorMessage">Errormessage</param>
         /// <param name="clxErrorCode">ErrorCode</param>
-        /// <param name="statusCode">ErrorCode</param>
+        /// <param name="statusCode">statusCode</param>
         public ClxApiException(string clxErrorMessage, int?  clxErrorCode, int statusCode)
         {
             ClxErrorMessage = clxErrorMessage;
@@ -37,6 +37,8 @@ namespace clxapi
             StatusCode = statusCode;
         }
 
-        
+
+
+       
     }
 }

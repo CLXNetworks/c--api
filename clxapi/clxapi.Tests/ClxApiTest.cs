@@ -140,5 +140,104 @@ namespace clxapi.Tests
 
             Assert.AreEqual(clxApi.Client.BaseURL + ClxSettings.GatewayPath + id, testAdapter.FullUrl);
         }
+
+        [TestMethod]
+        public void CheckUrlOfGetOperators()
+        {
+            ClxResponse response = new ClxResponse();
+            response.Body = "[{},{}]";
+            ClxTestAdapter testAdapter = new ClxTestAdapter(response);
+            ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }, testAdapter);
+            clxApi.SetBaseUrl("Https://TEST");
+            IEnumerable<Operator> data = clxApi.GetOperators();
+
+            Assert.AreEqual("Https://TEST" + ClxSettings.OperatorPath, testAdapter.FullUrl);
+        }
+
+        [TestMethod]
+        public void CheckUrlOfGetOperatorById()
+        {
+            ClxResponse response = new ClxResponse();
+            response.Body = "{}";
+            ClxTestAdapter testAdapter = new ClxTestAdapter(response);
+            ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }, testAdapter);
+            clxApi.SetBaseUrl("Https://TEST");
+            int id = 55;
+            Operator data = clxApi.GetOperatorById(id);
+
+            Assert.AreEqual("Https://TEST" + ClxSettings.OperatorPath + "55", testAdapter.FullUrl);
+        }
+
+        [TestMethod]
+        public void CheckUrlOfGetGateways()
+        {
+            ClxResponse response = new ClxResponse();
+            response.Body = "[{},{}]";
+            ClxTestAdapter testAdapter = new ClxTestAdapter(response);
+            ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }, testAdapter);
+            clxApi.SetBaseUrl("Https://TEST");
+            IEnumerable<Gateway> data = clxApi.GetGateways();
+
+            Assert.AreEqual("Https://TEST" + ClxSettings.GatewayPath, testAdapter.FullUrl);
+        }
+
+        [TestMethod]
+        public void CheckUrlOfGetGatewaysById()
+        {
+            ClxResponse response = new ClxResponse();
+            response.Body = "{}";
+            ClxTestAdapter testAdapter = new ClxTestAdapter(response);
+            ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }, testAdapter);
+            clxApi.SetBaseUrl("Https://TEST");
+            int id = 66;
+            Gateway data = clxApi.GetGatewayById(id);
+
+            Assert.AreEqual("Https://TEST" + ClxSettings.GatewayPath + id, testAdapter.FullUrl);
+        }
+
+        [TestMethod]
+        public void CheckUrlOfGetPriceEntriesByGatewayId()
+        {
+            ClxResponse response = new ClxResponse();
+            response.Body = "[{},{}]";
+            ClxTestAdapter testAdapter = new ClxTestAdapter(response);
+            ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }, testAdapter);
+            clxApi.SetBaseUrl("Https://TEST");
+            int id = 5234378;
+            IEnumerable<PriceEntry> data = clxApi.GetPriceEntriesByGatewayId(id);
+
+            Assert.AreEqual("Https://TEST" + ClxSettings.GatewayPath + id + ClxSettings.PricePath, testAdapter.FullUrl);
+        }
+
+        [TestMethod]
+        public void CheckUrlOfGetPriceEntriesByGatewayIdAndOperatorId()
+        {
+            ClxResponse response = new ClxResponse();
+            response.Body = "{}";
+            ClxTestAdapter testAdapter = new ClxTestAdapter(response);
+            ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }, testAdapter);
+            clxApi.SetBaseUrl("Https://TEST");
+            int id = 5234378;
+            int id2 = 1312;
+            PriceEntry data = clxApi.GetPriceEntriesByGatewayIdAndOperatorId(id, id2);
+
+            Assert.AreEqual("Https://TEST" + ClxSettings.GatewayPath + id + ClxSettings.PricePath + id2, testAdapter.FullUrl);
+        }
+
+        [TestMethod]
+        public void CheckUrlOfGetPriceEntriesByGatewayIdAndOperatorIdAndDate()
+        {
+            ClxResponse response = new ClxResponse();
+            response.Body = "{}";
+            ClxTestAdapter testAdapter = new ClxTestAdapter(response);
+            ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }, testAdapter);
+            clxApi.SetBaseUrl("Https://TEST");
+            int id = 5234378;
+            int id2 = 1312;
+            DateTime date = new DateTime(1999,12,12);
+            PriceEntry data = clxApi.GetPriceEntriesByGatewayIdAndOperatorIdAndDate(id, id2, date);
+
+            Assert.AreEqual("Https://TEST"  + ClxSettings.GatewayPath + id + ClxSettings.PricePath + id2 + ClxSettings.DateParam + "1999-12-12", testAdapter.FullUrl);
+        }
     }
 }
