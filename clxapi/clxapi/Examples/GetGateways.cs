@@ -5,15 +5,21 @@ using System.Web;
 
 namespace clxapi.Examples
 {
+
+    /// <summary>
+    /// Exampleclass, contains example in how to get all Gateways.
+    /// </summary>
     public class GetGateways
     {
-
+        /// <summary>
+        /// Remember to replace "Username" and "Password" with correct authentication.
+        /// </summary>
         public void Example()
         {
             try
             {
-                var clxApi = new ClxApi(new string[] { "Username", "Password" });
-                var gateways = clxApi.GetGateways();
+                ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" });
+                IEnumerable<Gateway> gateways = clxApi.GetGateways();
             }
             catch (ClxException e)
             {

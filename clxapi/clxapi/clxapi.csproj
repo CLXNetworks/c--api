@@ -80,6 +80,13 @@
     <Compile Include="ClxSettings.cs" />
     <Compile Include="ClxApi.cs" />
     <Compile Include="Client\ClxHttpClient.cs" />
+    <Compile Include="Examples\GetGatewayById.cs" />
+    <Compile Include="Examples\GetGateways.cs" />
+    <Compile Include="Examples\GetOperatorById.cs" />
+    <Compile Include="Examples\GetOperators.cs" />
+    <Compile Include="Examples\GetPriceEntriesByGatewayId.cs" />
+    <Compile Include="Examples\GetPriceEntriesByGatewayIdAndOperatorId.cs" />
+    <Compile Include="Examples\GetPriceEntriesByGatewayIdAndOperatorIdAndDate.cs" />
     <Compile Include="Exception\ClxApiException.cs" />
     <Compile Include="Exception\ClxException.cs" />
     <Compile Include="Models\Response\ClxResponse.cs" />

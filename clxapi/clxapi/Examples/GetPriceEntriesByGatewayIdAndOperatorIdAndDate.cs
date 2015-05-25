@@ -5,14 +5,20 @@ using System.Web;
 
 namespace clxapi.Examples
 {
+    /// <summary>
+    /// Exampleclass, contains example in how to get PriceEntry by Gateway id and Operator id and date.
+    /// </summary>
     public class GetPriceEntriesByGatewayIdAndOperatorIdAndDate
     {
+        /// <summary>
+        /// Remember to replace "Username" and "Password" with correct authentication.
+        /// </summary>
         public void Example()
         {
              try
              {
-                 var clxApi = new ClxApi(new string[] { "Username", "Password" }); 
-                 var priceEntry = clxApi.GetPriceEntriesByGatewayIdAndOperatorIdAndDate(2182, 14, new DateTime(2014, 05, 12));
+                 ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }); 
+                 PriceEntry priceEntry = clxApi.GetPriceEntriesByGatewayIdAndOperatorIdAndDate(2182, 14, new DateTime(2014, 05, 12));
              }
              catch (ClxException e)
              {

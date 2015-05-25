@@ -6,19 +6,19 @@ using System.Web;
 namespace clxapi.Examples
 {
     /// <summary>
-    /// Example Class
+    /// Exampleclass, contains example in how to get Operator by id.
     /// </summary>
     public class GetOperatorById
     {
         /// <summary>
-        /// Example in how to get Operator by ID by Wrapper.
+        /// Remember to replace "Username" and "Password" with correct authentication.
         /// </summary>
         public void Example()
         {
              try
-             { 
-                 var clxApi = new ClxApi(new string[] { "Username", "Password" }); 
-                 var @operator = clxApi.GetOperatorById(14);
+             {
+                 ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" }); 
+                 Operator @operator = clxApi.GetOperatorById(14);
              }
              catch (ClxException e)
              {

@@ -43,10 +43,10 @@
     <ProjectSummary>C# wrapper for Clx api.</ProjectSummary>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="clxapi" isDocumented="True">Namespace for C# Wrapper toward Clx api.</NamespaceSummaryItem>
-      <NamespaceSummaryItem name="clxapi.Adapter" isDocumented="True">Contains adapter to parse data and bind it to ClxResponse model.</NamespaceSummaryItem>
-      <NamespaceSummaryItem name="clxapi.App_Data" isDocumented="False" />
-      <NamespaceSummaryItem name="clxapi.Client" isDocumented="True">Namespace contains ClxHttpClient act as a service layer between ClxApi and HttpAdapter. Funcitonality of Namespace also include Exception handling.</NamespaceSummaryItem>
-    </NamespaceSummaries>
+<NamespaceSummaryItem name="clxapi.Adapter" isDocumented="True">Contains adapter to parse data and bind it to ClxResponse model.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="clxapi.App_Data" isDocumented="False" />
+<NamespaceSummaryItem name="clxapi.Client" isDocumented="True">Namespace contains ClxHttpClient act as a service layer between ClxApi and HttpAdapter. Funcitonality of Namespace also include Exception handling.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="clxapi.Examples" isDocumented="True">Contains code examples how to use wrapper.</NamespaceSummaryItem></NamespaceSummaries>
     <MaximumGroupParts>2</MaximumGroupParts>
     <NamespaceGrouping>False</NamespaceGrouping>
     <SyntaxFilters>Standard</SyntaxFilters>
@@ -81,6 +81,7 @@
     <Folder Include="Content\VersionHistory" />
     <Folder Include="icons" />
     <Folder Include="Media" />
+    <Folder Include="Examples" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\VersionHistory\v1.0.0.0.aml" />

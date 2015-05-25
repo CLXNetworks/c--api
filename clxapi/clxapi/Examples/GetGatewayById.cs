@@ -5,14 +5,20 @@ using System.Web;
 
 namespace clxapi.Examples
 {
+    /// <summary>
+    /// Exampleclass, contains example in how to get Gateway by id.
+    /// </summary>
     public class GetGatewayById
     {
+        /// <summary>
+        /// Remember to replace "Username" and "Password" with correct authentication.
+        /// </summary>
         public void Example() 
         {
             try
             {
-                var clxApi = new ClxApi(new string[] { "Username", "Password" });
-                var gateway = clxApi.GetGatewayById(2182);
+                ClxApi clxApi = new ClxApi(new string[] { "Username", "Password" });
+                Gateway gateway = clxApi.GetGatewayById(2182);
             }
             catch (ClxException e)
             {
