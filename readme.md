@@ -5,7 +5,7 @@
 ##Getting started
 
 1. Clone or Fork repository.   
-2. Run sollution clxapi in Visual studio.   
+2. Run solution clxapi in Visual studio.   
 3. Installation done, watch [examples](https://github.com/CLXNetworks/c-sharp-api/tree/master/clxapi/clxapi/Examples) to get started.    
         
 ##Requirements
