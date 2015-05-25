@@ -1,5 +1,7 @@
 ## Examples 
 
+###### In all examples, don't forget to use correct "Username" and "Password"
+
  ```  
 GetGatewayById
 
