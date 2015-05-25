@@ -89,7 +89,7 @@ namespace clxapi.Tests
             Assert.AreEqual(clxApi.Client.BaseURL + ClxSettings.OperatorPath + id, testAdapter.FullUrl);
         }
 
-
+        
 
         [TestMethod]
         public void AssertClxApiCanGetGateways()

@@ -100,7 +100,7 @@ namespace clxapi
         /// try
         /// { 
         ///     var clxApi = new ClxApi(new string[] { "Username", "Password" }); 
-        ///     var operator = clxApi.GetOperatorByID(14);
+        ///     var @operator = clxApi.GetOperatorById(14);
         /// }
         /// catch (ClxException e)
         /// {
