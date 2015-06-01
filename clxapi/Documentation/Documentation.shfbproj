@@ -43,10 +43,11 @@
     <ProjectSummary>C# wrapper for Clx api.</ProjectSummary>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="clxapi" isDocumented="True">Namespace for C# Wrapper toward Clx api.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="clxapi.Adapter" isDocumented="True">Contains adapter to parse data and bind it to ClxResponse model.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="clxapi.App_Data" isDocumented="False" />
-<NamespaceSummaryItem name="clxapi.Client" isDocumented="True">Namespace contains ClxHttpClient act as a service layer between ClxApi and HttpAdapter. Funcitonality of Namespace also include Exception handling.</NamespaceSummaryItem>
-<NamespaceSummaryItem name="clxapi.Examples" isDocumented="True">Contains code examples how to use wrapper.</NamespaceSummaryItem></NamespaceSummaries>
+      <NamespaceSummaryItem name="clxapi.Adapter" isDocumented="True">Contains adapter to parse data and bind it to ClxResponse model.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="clxapi.App_Data" isDocumented="False" />
+      <NamespaceSummaryItem name="clxapi.Client" isDocumented="True">Namespace contains ClxHttpClient act as a service layer between ClxApi and HttpAdapter. Funcitonality of Namespace also include Exception handling.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="clxapi.Examples" isDocumented="True">Contains code examples how to use wrapper.</NamespaceSummaryItem>
+    </NamespaceSummaries>
     <MaximumGroupParts>2</MaximumGroupParts>
     <NamespaceGrouping>False</NamespaceGrouping>
     <SyntaxFilters>Standard</SyntaxFilters>
@@ -100,12 +101,6 @@
       <Project>{944a21e8-1e53-4bb1-9545-3c182b554115}</Project>
       <Private>True</Private>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <!-- Import the SHFB build targets -->
   <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" />
